@@ -10,55 +10,57 @@ import SwiftUI
 
 struct TimerView: View {
     
-    // Pairs of technique names and their corresponding colors
-    private let techniquesWithColors: [(String, Color)] = [
-        ("Pomodoro", Color.blue),
-        ("4-4-4-4 Method", Color.orange),
-        ("The 52-17 Method", Color.red)
+    private let techniquesWithIcons: [(String, String, String, Color)] = [
+        ("Pomodoro", "timer", "25 minutes work", Color.blue),
+        ("4-4-4-4 Method", "stopwatch", "4 cycles of 25-min work", Color.orange),
+        ("The 52-17 Method", "clock", "52 min work, 17 min break", Color.red),
+        ("The 50-10 Rule", "hourglass", "50 minutes with focused intensity, 10-minute break", Color.green)
     ]
     
-    // Defining a grid with adaptive columns
     private let adaptiveColumns = [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.adaptive(minimum: 170))
     ]
     
     var body: some View {
         NavigationView {
             ScrollView {
-                
-                /* >Note:
-                 We use a lazy horizontal grid when you want to display a large, horizontally scrollable collection of views arranged in a two dimensional layout.
-                 _source: google_
-                 */
                 LazyVGrid(columns: adaptiveColumns, spacing: 20) {
-                    // Iterate through the technique-color pairs
-                    ForEach(techniquesWithColors, id: \.0) { (technique, color) in
+                    ForEach(techniquesWithIcons, id: \.0) { (technique, iconName, description, color) in
                         ZStack {
-                            // Adding gradient to grid boxes with shadow
+                            // Add a gradient background
                             LinearGradient(gradient: Gradient(colors: [color, color.opacity(0.8)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                 .frame(width: 170, height: 170)
                                 .cornerRadius(20) // Rounded corners
                                 .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 2) // Shadow effect
-                            // Created a colored rectangle as a background
-                            Rectangle()
-                                .frame(width: 170, height: 170)
-                                .foregroundColor(color)
-                                .cornerRadius(25)
                             
-                            // Displaying the technique name on top of the rectangle
-                            Text(technique)
-                                .foregroundColor(.white)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                            VStack {
+                                Image(systemName: iconName)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 60))
+                                
+                                Text(technique)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                                    .padding(10) // Add padding to the text
+                                    .background(Color.black.opacity(0.5)) // Background for text
+                                    .cornerRadius(10) // Rounded corners for text background
+                                
+                                Text(description)
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                    .padding(.horizontal, 10)
+                                    .padding(.bottom, 10)
+                            }
                         }
                     }
                 }
+                .padding() // Add padding to the grid
             }
-            .navigationTitle("Techniques") // Set the navigation title
-            .padding() // Add padding to the content
+            .navigationTitle("Techniqus")
         }
     }
 }
-
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
