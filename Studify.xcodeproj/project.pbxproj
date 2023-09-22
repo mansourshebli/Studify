@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EB95C0B2ABE46FA00D70707 /* PomodoraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */; };
+		6EB95C0D2ABE472100D70707 /* 4-4-4-4-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */; };
+		6EB95C0F2ABE473800D70707 /* The50-10RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */; };
+		6EB95C112ABE475D00D70707 /* The-52-17-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */; };
 		6EBA2F2F2AA0C98D009A0FE0 /* StudifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */; };
 		6EBA2F312AA0C98D009A0FE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */; };
 		6EBA2F332AA0C98E009A0FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBA2F322AA0C98E009A0FE0 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoraView.swift; sourceTree = "<group>"; };
+		6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4-4-4-4-MethodView.swift"; sourceTree = "<group>"; };
+		6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The50-10RuleView.swift"; sourceTree = "<group>"; };
+		6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The-52-17-MethodView.swift"; sourceTree = "<group>"; };
 		6EBA2F2B2AA0C98D009A0FE0 /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyApp.swift; sourceTree = "<group>"; };
 		6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EB95C092ABE46BA00D70707 /* Timer Techniques Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */,
+				6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */,
+				6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */,
+				6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */,
+			);
+			path = "Timer Techniques Views";
+			sourceTree = "<group>";
+		};
 		6EBA2F222AA0C98D009A0FE0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +109,7 @@
 				6EBA2F3F2AA0D0A3009A0FE0 /* DashboardView.swift */,
 				6EBA2F412AA0D0B5009A0FE0 /* ToDoView.swift */,
 				6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */,
+				6EB95C092ABE46BA00D70707 /* Timer Techniques Views */,
 				6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */,
 			);
 			path = Views;
@@ -166,9 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EBA2F442AA0D0C5009A0FE0 /* TimerView.swift in Sources */,
+				6EB95C0B2ABE46FA00D70707 /* PomodoraView.swift in Sources */,
 				6EBA2F462AA0D0DA009A0FE0 /* LongTermGoalsView.swift in Sources */,
+				6EB95C0D2ABE472100D70707 /* 4-4-4-4-MethodView.swift in Sources */,
 				6EBA2F312AA0C98D009A0FE0 /* ContentView.swift in Sources */,
 				6EBA2F402AA0D0A3009A0FE0 /* DashboardView.swift in Sources */,
+				6EB95C112ABE475D00D70707 /* The-52-17-MethodView.swift in Sources */,
+				6EB95C0F2ABE473800D70707 /* The50-10RuleView.swift in Sources */,
 				6EBA2F422AA0D0B5009A0FE0 /* ToDoView.swift in Sources */,
 				6EBA2F2F2AA0C98D009A0FE0 /* StudifyApp.swift in Sources */,
 			);

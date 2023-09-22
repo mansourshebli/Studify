@@ -14,7 +14,7 @@ struct TimerView: View {
         ("Pomodoro", "timer", "25 minutes work, 5 minutes break", Color.blue),
         ("4-4-4-4 Method", "stopwatch", "4 cycles of 25-min work", Color.orange),
         ("The 52-17 Method", "clock", "52 min work, 17 min break", Color.red),
-        ("The 50-10 Rule", "hourglass", "50 minutes with focused intensity, 10-minute break", Color.green)
+        ("The 50-10 Rule", "hourglass", "50 minutes, 10-minute break", Color.green)
     ]
     
     private let adaptiveColumns = [
