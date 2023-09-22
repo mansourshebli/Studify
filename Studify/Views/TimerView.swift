@@ -34,6 +34,11 @@ struct TimerView: View {
                     // Iterate through the technique-color pairs
                     ForEach(techniquesWithColors, id: \.0) { (technique, color) in
                         ZStack {
+                            // Adding gradient to grid boxes with shadow
+                            LinearGradient(gradient: Gradient(colors: [color, color.opacity(0.8)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .frame(width: 170, height: 170)
+                                .cornerRadius(20) // Rounded corners
+                                .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 2) // Shadow effect
                             // Created a colored rectangle as a background
                             Rectangle()
                                 .frame(width: 170, height: 170)
@@ -43,7 +48,7 @@ struct TimerView: View {
                             // Displaying the technique name on top of the rectangle
                             Text(technique)
                                 .foregroundColor(.white)
-                                .font(.system(size: 20, design: .rounded))
+                                .font(.system(size: 24, weight: .bold, design: .rounded))
                         }
                     }
                 }
