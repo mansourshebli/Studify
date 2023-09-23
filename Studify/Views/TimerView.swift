@@ -57,7 +57,7 @@ struct TimerView: View {
                 }
                 .padding() // Add padding to the grid
             }
-            .navigationTitle("Techniqus")
+            .navigationTitle("Techniques")
         }
     }
 }
