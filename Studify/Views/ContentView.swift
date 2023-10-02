@@ -19,7 +19,7 @@ struct ContentView: View {
                         Label("Dashboard", systemImage: "house")
                     }
                 
-                Text("ToDo")
+                ToDoView()
                     .tabItem {
                         Label("ToDo", systemImage: "list.bullet.clipboard")
                     }

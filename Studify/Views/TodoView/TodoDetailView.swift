@@ -1,18 +1,23 @@
-//
-//  TodoDetailView.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 02/10/2023.
-//
-
 import SwiftUI
 
 struct TodoDetailView: View {
+    
+    @Binding var todo: Todo
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            TextField("Title", text: $todo.Title)
+            TextField("Subtitle", text: $todo.subtitle)
+            Toggle("Is completed?", isOn: $todo.isCompleted)
+        }.navigationTitle("Todo Detail")
     }
 }
 
-#Preview {
-    TodoDetailView()
+struct TodoDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack{
+            TodoDetailView(todo: .constant(Todo(Title: "Feed the cat", subtitle: "123"))
+)
+        }
+    }
 }
+

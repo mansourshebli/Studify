@@ -1,8 +1,9 @@
-//
-//  Todo.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 02/10/2023.
-//
-
 import Foundation
+
+struct Todo: Identifiable {
+    var id = UUID()
+    var Title: String
+    var subtitle: String
+    var isCompleted = false
+}
+

@@ -1,18 +1,31 @@
-//
-//  NewTodoView.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 02/10/2023.
-//
-
 import SwiftUI
-
 struct NewTodoView: View {
+    @State private var title = ""
+    @State private var subtitle = ""
+    @Binding var sourceArray: [Todo]
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form{
+            Section{
+                TextField("Title", text: $title)
+                TextField("Subtitle",text: $subtitle)
+            }
+            Section{
+                Button("Save"){
+                    let todo = Todo(Title: title, subtitle: subtitle)
+                    sourceArray.append(todo)
+                    dismiss()
+                }
+                Button("Cancel", role: .destructive){
+                    dismiss()
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    NewTodoView()
+struct NewTodoView_Previews: PreviewProvider {
+    static var previews: some View {
+        NewTodoView(sourceArray: .constant([]))
+    }
 }
