@@ -1,18 +1,18 @@
-//
-//  SearchBar.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 02/10/2023.
-//
-
+//Here I made the search bar.
 import SwiftUI
 
 struct SearchBar: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Binding var searchText: String
 
-#Preview {
-    SearchBar()
+    var body: some View {
+        HStack {
+            TextField("Search", text: $searchText)
+                .padding(8)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 4)
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.blue)
+        }
+    }
 }

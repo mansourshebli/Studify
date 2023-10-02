@@ -1,3 +1,4 @@
+//This view is shown when the user clicks on a todo to view and edit the details.
 import SwiftUI
 
 struct TodoDetailView: View {

@@ -1,3 +1,4 @@
+//Here is the struct I used to declare todos.
 import Foundation
 
 struct Todo: Identifiable {

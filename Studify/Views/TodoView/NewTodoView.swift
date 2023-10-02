@@ -1,3 +1,4 @@
+//This view is used to add new todos.
 import SwiftUI
 struct NewTodoView: View {
     @State private var title = ""
