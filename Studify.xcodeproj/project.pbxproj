@@ -56,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E9F4D032ACB389700937208 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				6EB95C092ABE46BA00D70707 /* Timer Techniques Views */,
+			);
+			path = TimerView;
+			sourceTree = "<group>";
+		};
 		6EB95C092ABE46BA00D70707 /* Timer Techniques Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +125,7 @@
 				6EBA2F3F2AA0D0A3009A0FE0 /* DashboardView.swift */,
 				80DD917C2ACB04FF0054E4A6 /* TodoView */,
 				6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */,
-				6EB95C092ABE46BA00D70707 /* Timer Techniques Views */,
+				6E9F4D032ACB389700937208 /* TimerView */,
 				6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */,
 			);
 			path = Views;
