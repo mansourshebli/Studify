@@ -59,6 +59,7 @@
 		6E9F4D032ACB389700937208 /* TimerView */ = {
 			isa = PBXGroup;
 			children = (
+				6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */,
 				6EB95C092ABE46BA00D70707 /* Timer Techniques Views */,
 			);
 			path = TimerView;
@@ -124,9 +125,7 @@
 				6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */,
 				6EBA2F3F2AA0D0A3009A0FE0 /* DashboardView.swift */,
 				80DD917C2ACB04FF0054E4A6 /* TodoView */,
-				6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */,
 				6E9F4D032ACB389700937208 /* TimerView */,
-				6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 				80DD91832ACB111F0054E4A6 /* SearchBar.swift */,
 				80DD917D2ACB05A90054E4A6 /* Todo.swift */,
 				80DD917F2ACB05C80054E4A6 /* NewTodoView.swift */,
+				6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */,
 				80DD91812ACB05E90054E4A6 /* TodoDetailView.swift */,
 			);
 			path = TodoView;
