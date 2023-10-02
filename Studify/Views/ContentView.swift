@@ -1,25 +1,15 @@
-//
-//  ContentView.swift
-//  Studify
-//
-//  Created by Mansour Mohammed Alshebli on 31/08/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            
-            // TDO: Adding Views
-            
             TabView {
                 Text("Dashboard")
                     .tabItem {
                         Label("Dashboard", systemImage: "house")
                     }
                 
-                Text("ToDo")
+                ToDoView()
                     .tabItem {
                         Label("ToDo", systemImage: "list.bullet.clipboard")
                     }
