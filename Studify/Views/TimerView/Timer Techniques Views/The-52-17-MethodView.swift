@@ -1,10 +1,3 @@
-//
-//  The-52-17-MethodView.swift
-//  Studify
-//
-//  Created by Mansour Mohammed Alshebli on 23/09/2023.
-//
-
 import SwiftUI
 
 struct The_52_17_MethodView: View {

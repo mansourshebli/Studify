@@ -1,10 +1,3 @@
-//
-//  4-4-4-4-MethodView.swift
-//  Studify
-//
-//  Created by Mansour Mohammed Alshebli on 23/09/2023.
-//
-
 import SwiftUI
 
 struct __4_4_4_MethodView: View {
