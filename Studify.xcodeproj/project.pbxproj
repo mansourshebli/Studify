@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E9F4D052ACB39C700937208 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F4D042ACB39C700937208 /* CircularProgressView.swift */; };
-		6EB95C0B2ABE46FA00D70707 /* PomodoraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */; };
+		6EB95C0B2ABE46FA00D70707 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0A2ABE46FA00D70707 /* PomodoroView.swift */; };
 		6EB95C0D2ABE472100D70707 /* 4-4-4-4-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */; };
 		6EB95C0F2ABE473800D70707 /* The50-10RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */; };
 		6EB95C112ABE475D00D70707 /* The-52-17-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */; };
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		6E9F4D042ACB39C700937208 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoraView.swift; sourceTree = "<group>"; };
+		6EB95C0A2ABE46FA00D70707 /* PomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
 		6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4-4-4-4-MethodView.swift"; sourceTree = "<group>"; };
 		6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The50-10RuleView.swift"; sourceTree = "<group>"; };
 		6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The-52-17-MethodView.swift"; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		6EB95C092ABE46BA00D70707 /* Timer Techniques Views */ = {
 			isa = PBXGroup;
 			children = (
-				6EB95C0A2ABE46FA00D70707 /* PomodoraView.swift */,
+				6EB95C0A2ABE46FA00D70707 /* PomodoroView.swift */,
 				6EB95C0C2ABE472100D70707 /* 4-4-4-4-MethodView.swift */,
 				6EB95C0E2ABE473800D70707 /* The50-10RuleView.swift */,
 				6EB95C102ABE475D00D70707 /* The-52-17-MethodView.swift */,
@@ -219,7 +219,7 @@
 				80DD917E2ACB05A90054E4A6 /* Todo.swift in Sources */,
 				80DD91822ACB05E90054E4A6 /* TodoDetailView.swift in Sources */,
 				6EBA2F442AA0D0C5009A0FE0 /* TimerView.swift in Sources */,
-				6EB95C0B2ABE46FA00D70707 /* PomodoraView.swift in Sources */,
+				6EB95C0B2ABE46FA00D70707 /* PomodoroView.swift in Sources */,
 				6EBA2F462AA0D0DA009A0FE0 /* LongTermGoalsView.swift in Sources */,
 				6EB95C0D2ABE472100D70707 /* 4-4-4-4-MethodView.swift in Sources */,
 				6EBA2F312AA0C98D009A0FE0 /* ContentView.swift in Sources */,

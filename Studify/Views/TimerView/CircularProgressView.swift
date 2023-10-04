@@ -10,7 +10,7 @@ import SwiftUI
 // Struct to display a circular progress view for a timer
 struct CircularProgressView: View {
     // Binding for the progress value as a CGFloat
-    @Binding var timerProgress: CGFloat
+    @Binding var timerProgress: Double
 
     var body: some View {
         ZStack {
@@ -23,7 +23,7 @@ struct CircularProgressView: View {
 
             // Dynamic circle that represents the progress
             Circle()
-                .trim(from: 0, to: timerProgress)
+                .trim(from: 0, to: CGFloat(timerProgress))
                 .stroke(style: .init(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color.blue)
                 .frame(width: 320, height: 320)
