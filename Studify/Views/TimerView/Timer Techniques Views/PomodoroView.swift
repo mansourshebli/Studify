@@ -79,7 +79,7 @@ struct PomodoroView: View {
         .padding()
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text(isBreak ? "Break Time" : "Pomodoro Finished"),
+                title: Text(isBreak ? "Break Time!" : "Pomodoro Finished"),
                 message: Text(isBreak ? "Take a 5-minute break?" : "What would you like to do next?"),
                 primaryButton: .default(isBreak ? Text("Start Break") : Text("Start New Pomodoro")) {
                     if isBreak {
