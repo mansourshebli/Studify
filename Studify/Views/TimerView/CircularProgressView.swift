@@ -9,7 +9,7 @@ import SwiftUI
 
 // Struct to display a circular progress view for a timer
 struct CircularProgressView: View {
-    // Binding for the progress value as a CGFloat
+    // Binding for the progress value as a Double
     @Binding var timerProgress: Double
 
     var body: some View {

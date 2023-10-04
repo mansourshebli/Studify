@@ -13,6 +13,7 @@ struct PomodoroView: View {
     @State private var isTimerRunning = false
     @State private var showAlert = false
     @State private var isBreak = false
+    @State private var timerProgress = 1.0
 
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct PomodoroView: View {
                 .bold()
                 .fontDesign(.rounded)
             
-            CircularProgressView(timerProgress: $timerDuration)
+            CircularProgressView(timerProgress: $timerProgress)
                 .padding()
             
             HStack {
@@ -92,6 +93,13 @@ struct PomodoroView: View {
                 }
             )
         }
+        .onAppear() {
+            startTimerProgressUpdate()
+        }
+        .onDisappear() {
+            timerProgress = 1.0
+            timer?.invalidate()
+        }
     }
 
     func formatTime(_ seconds: Int) -> String {
@@ -105,6 +113,7 @@ struct PomodoroView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             if timerDuration > 0 {
                 timerDuration -= 1
+                timerProgress = timerDuration / 1500.0 // Update the progress
             } else {
                 timer?.invalidate()
                 showAlert = true
@@ -122,6 +131,7 @@ struct PomodoroView: View {
     func endTimer() {
         timer?.invalidate()
         timerDuration = 1500.0 // Reset to 25 minutes
+        timerProgress = 1.0 // Reset progress
         isTimerRunning = false
     }
 
@@ -135,7 +145,15 @@ struct PomodoroView: View {
     func endSession() {
         timer?.invalidate()
         timerDuration = 1500.0 // Reset to 25 minutes
+        timerProgress = 1.0 // Reset progress
         isTimerRunning = false
+    }
+
+    // Helper function to update progress even when paused
+    private func startTimerProgressUpdate() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            timerProgress = timerDuration / 1500.0 // Update the progress
+        }
     }
 }
 
