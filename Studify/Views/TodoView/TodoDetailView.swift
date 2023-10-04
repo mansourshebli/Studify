@@ -2,23 +2,38 @@
 import SwiftUI
 
 struct TodoDetailView: View {
-    
     @Binding var todo: Todo
+    @Binding var selectedPriorityFilter: TodoPriority?
+    
     var body: some View {
         Form {
-            TextField("Title", text: $todo.Title)
+            TextField("Title", text: $todo.title)
             TextField("Subtitle", text: $todo.subtitle)
             Toggle("Is completed?", isOn: $todo.isCompleted)
-        }.navigationTitle("Todo Detail")
+            
+            if let selectedPriority = selectedPriorityFilter {
+                Text("Priority: \(selectedPriority.rawValue)")
+            } else {
+                Text("Priority: \(todo.priority.rawValue)")
+                    .foregroundColor(todo.priorityColor)
+            }
+        }
+        .navigationTitle("Todo Detail")
     }
 }
 
 struct TodoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack{
-            TodoDetailView(todo: .constant(Todo(Title: "Feed the cat", subtitle: "123"))
-)
+        NavigationView {
+            TodoDetailView(
+                todo: .constant(Todo(
+                    title: "Feed the cat",
+                    subtitle: "123",
+                    priority: .yellow, // Correct the order
+                    priorityColor: .yellow // Correct the order
+                )),
+                selectedPriorityFilter: .constant(.yellow)
+            )
         }
     }
 }
-

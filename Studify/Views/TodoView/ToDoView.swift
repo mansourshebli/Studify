@@ -3,59 +3,67 @@ import SwiftUI
 
 struct ToDoView: View {
     @State private var todos = [
-        Todo(Title: "Add more todos!!", subtitle: "Add as much todos as you want!!")
-        
+        Todo(id: UUID(), title: "Add more todos!!", subtitle: "Add as much todos as you want!!", isCompleted: false, priority: .red, priorityColor: .red)
     ]
     @State private var searchText = ""
     @State private var showSheet = false
+    
+    @State private var selectedPriorityFilter: TodoPriority? = nil
+    
     var body: some View {
-        NavigationStack {
-            VStack{
+        NavigationView {
+            VStack {
                 SearchBar(searchText: $searchText)
+                
+                Picker("Filter by Priority", selection: $selectedPriorityFilter) {
+                    Text("All").tag(nil as TodoPriority?)
+                    ForEach(TodoPriority.allCases, id: \.self) { priority in
+                        Text(priority.rawValue).tag(priority as TodoPriority?)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
                 List($todos, editActions: [.all]) { $todo in
-                    if searchText.isEmpty || todo.Title.localizedCaseInsensitiveContains(searchText) {
-                        NavigationLink{
-                            TodoDetailView(todo: $todo)
-                        } label: {
+                    if (searchText.isEmpty || todo.title.localizedCaseInsensitiveContains(searchText)) &&
+                       (selectedPriorityFilter == nil || todo.priority == selectedPriorityFilter) {
+                        NavigationLink(destination: TodoDetailView(todo: $todo, selectedPriorityFilter: $selectedPriorityFilter)) {
                             HStack {
-                                Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle").onTapGesture {
-                                    todo.isCompleted.toggle()
-                                }
-                                VStack (alignment: .leading, spacing: 2){
-                                    Text(todo.Title).strikethrough(todo.isCompleted)
-                                    if !todo.subtitle.isEmpty{
-                                        Text(todo.subtitle).font(.caption).foregroundColor(.gray).strikethrough(todo.isCompleted)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(todo.priorityColor)
+                                    .frame(width: 10, height: 10)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(todo.title).strikethrough(todo.isCompleted)
+                                    if !todo.subtitle.isEmpty {
+                                        Text(todo.subtitle).font(.caption).foregroundColor(.gray)
                                     }
                                 }
                             }
                         }
                     }
-                }.navigationTitle("Todos")
-                    .toolbar{
-                        ToolbarItem(placement: .navigationBarLeading){
-                            EditButton()}
-                        ToolbarItem(placement: .navigationBarTrailing){
-                            Button{
-                                showSheet = true
-                            }label: {
-                                Image(systemName: "plus")
-                            }
-                        }
-                        
-                    }
-                    .sheet(isPresented: $showSheet){
-                        NewTodoView(sourceArray: $todos).presentationDetents([.medium])
-                    }
+                }
             }
-        }
-    }
-    
-    
-    
-    struct ToDoView_Previews: PreviewProvider {
-        static var previews: some View {
-            ToDoView()
+            .navigationTitle("Todos")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showSheet = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showSheet) {
+                NewTodoView(sourceArray: $todos).presentationDetents([.medium])
+            }
         }
     }
 }
 
+struct ToDoView_Previews: PreviewProvider {
+    static var previews: some View {
+        ToDoView()
+    }
+}
