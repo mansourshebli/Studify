@@ -6,15 +6,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button{
+            Button {
                 isDarkMode.toggle()
-            }label: {
-            Image(systemName: isDarkMode ? "moon" : "sun.max")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .foregroundColor(isDarkMode ? .white : .black)
-        }.preferredColorScheme(isDarkMode ? .dark : .light)
+            } label: {
+                Image(systemName: isDarkMode ? "moon" : "sun.max")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 48, height: 48)
+                    .foregroundColor(isDarkMode ? .white : .black)
+            }
+            .offset(x: 150)
+            .preferredColorScheme(isDarkMode ? .dark : .light)
             
             
 
