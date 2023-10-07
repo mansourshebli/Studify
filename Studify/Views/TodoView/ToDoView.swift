@@ -2,9 +2,7 @@
 import SwiftUI
 
 struct ToDoView: View {
-    @State private var todos = [
-        Todo(id: UUID(), title: "Add more todos!!", subtitle: "Add as much todos as you want!!", isCompleted: false, priority: .red, priorityColor: .red)
-    ]
+    @StateObject var todoManager = TodoManager()
     @State private var searchText = ""
     @State private var showSheet = false
     
@@ -23,7 +21,7 @@ struct ToDoView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 
-                List($todos, editActions: [.all]) { $todo in
+                List($todoManager.todos, editActions: [.all]) { $todo in
                     if (searchText.isEmpty || todo.title.localizedCaseInsensitiveContains(searchText)) &&
                        (selectedPriorityFilter == nil || todo.priority == selectedPriorityFilter) {
                         NavigationLink(destination: TodoDetailView(todo: $todo, selectedPriorityFilter: $selectedPriorityFilter)) {
@@ -56,7 +54,7 @@ struct ToDoView: View {
                 }
             }
             .sheet(isPresented: $showSheet) {
-                NewTodoView(sourceArray: $todos).presentationDetents([.medium])
+                NewTodoView(sourceArray: $todoManager.todos).presentationDetents([.medium])
             }
         }
     }
