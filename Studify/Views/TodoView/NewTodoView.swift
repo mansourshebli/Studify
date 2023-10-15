@@ -6,7 +6,7 @@ struct NewTodoView: View {
     @Binding var sourceArray: [Todo]
     
     @State private var selectedPriority = TodoPriority.yellow
-    
+   
     @Environment(\.dismiss) var dismiss
     
     var body: some View {

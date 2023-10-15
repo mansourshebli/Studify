@@ -2,7 +2,7 @@
 import Foundation
 import SwiftUI
 
-struct Todo: Codable, Identifiable {
+struct Todo: Identifiable, Codable {
     var id = UUID()
     var title: String
     var subtitle: String
@@ -11,7 +11,9 @@ struct Todo: Codable, Identifiable {
     var priorityColor: Color
 }
 
-enum TodoPriority: String, CaseIterable { //CaseIterable will generate an array property of al cases in an enum.
+
+
+enum TodoPriority: String, CaseIterable, Codable { //CaseIterable will generate an array property of al cases in an enum.
     
     //Here are the three categories where the todos will be classified into.
     case red = "Urgent"
