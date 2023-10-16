@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("isDarkMode") private var isDarkMode = false
+
     
     var body: some View {
         VStack {
@@ -17,8 +18,6 @@ struct ContentView: View {
             }
             .offset(x: 150)
             .preferredColorScheme(isDarkMode ? .dark : .light)
-            
-            
 
             TabView {
                 Text("Dashboard")
@@ -42,7 +41,6 @@ struct ContentView: View {
                     }
             }
         }
-       
     }
 }
 

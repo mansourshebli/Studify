@@ -111,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				6EBA2F3E2AA0CF1B009A0FE0 /* Views */,
-				6EB067FD2ACEF58200C569F1 /* Long Term Goals */,
 				6EBA2F322AA0C98E009A0FE0 /* Assets.xcassets */,
 				6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */,
 				6EBA2F342AA0C98E009A0FE0 /* Preview Content */,
@@ -132,6 +131,7 @@
 			children = (
 				6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */,
 				6EBA2F3F2AA0D0A3009A0FE0 /* DashboardView.swift */,
+				6EB067FD2ACEF58200C569F1 /* Long Term Goals */,
 				80DD917C2ACB04FF0054E4A6 /* TodoView */,
 				6E9F4D032ACB389700937208 /* TimerView */,
 			);
