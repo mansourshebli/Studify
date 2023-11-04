@@ -17,6 +17,10 @@
 		6EBA2F422AA0D0B5009A0FE0 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F412AA0D0B5009A0FE0 /* ToDoView.swift */; };
 		6EBA2F442AA0D0C5009A0FE0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */; };
 		6EBA2F462AA0D0DA009A0FE0 /* LongTermGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */; };
+		6ED3247D2AF6206A007A5594 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3247C2AF6206A007A5594 /* ProgressBar.swift */; };
+		6ED3247F2AF621CF007A5594 /* LongTermGoalSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3247E2AF621CF007A5594 /* LongTermGoalSwift.swift */; };
+		6ED324812AF62238007A5594 /* LongTermGoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED324802AF62238007A5594 /* LongTermGoalDetailView.swift */; };
+		6ED324832AF624DD007A5594 /* LongTermGoalsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED324822AF624DD007A5594 /* LongTermGoalsManager.swift */; };
 		80D85CD92AD1EAFE00313393 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D85CD82AD1EAFE00313393 /* TodoManager.swift */; };
 		80D85CDB2AD1EB2100313393 /* Todo+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D85CDA2AD1EB2100313393 /* Todo+Sample.swift */; };
 		80DD917E2ACB05A90054E4A6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD917D2ACB05A90054E4A6 /* Todo.swift */; };
@@ -37,6 +41,10 @@
 		6EBA2F412AA0D0B5009A0FE0 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		6EBA2F432AA0D0C5009A0FE0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermGoalsView.swift; sourceTree = "<group>"; };
+		6ED3247C2AF6206A007A5594 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		6ED3247E2AF621CF007A5594 /* LongTermGoalSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermGoalSwift.swift; sourceTree = "<group>"; };
+		6ED324802AF62238007A5594 /* LongTermGoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermGoalDetailView.swift; sourceTree = "<group>"; };
+		6ED324822AF624DD007A5594 /* LongTermGoalsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermGoalsManager.swift; sourceTree = "<group>"; };
 		80D85CD82AD1EAFE00313393 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 		80D85CDA2AD1EB2100313393 /* Todo+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Sample.swift"; sourceTree = "<group>"; };
 		80DD917D2ACB05A90054E4A6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -66,12 +74,16 @@
 			path = TimerView;
 			sourceTree = "<group>";
 		};
-		6EB067FD2ACEF58200C569F1 /* Long Term Goals */ = {
+		6EB067FD2ACEF58200C569F1 /* LongTermGoals */ = {
 			isa = PBXGroup;
 			children = (
 				6EBA2F452AA0D0DA009A0FE0 /* LongTermGoalsView.swift */,
+				6ED3247C2AF6206A007A5594 /* ProgressBar.swift */,
+				6ED3247E2AF621CF007A5594 /* LongTermGoalSwift.swift */,
+				6ED324802AF62238007A5594 /* LongTermGoalDetailView.swift */,
+				6ED324822AF624DD007A5594 /* LongTermGoalsManager.swift */,
 			);
-			path = "Long Term Goals";
+			path = LongTermGoals;
 			sourceTree = "<group>";
 		};
 		6EBA2F222AA0C98D009A0FE0 = {
@@ -114,7 +126,7 @@
 			children = (
 				6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */,
 				6EBA2F3F2AA0D0A3009A0FE0 /* DashboardView.swift */,
-				6EB067FD2ACEF58200C569F1 /* Long Term Goals */,
+				6EB067FD2ACEF58200C569F1 /* LongTermGoals */,
 				80DD917C2ACB04FF0054E4A6 /* TodoView */,
 				6E9F4D032ACB389700937208 /* TimerView */,
 			);
@@ -206,18 +218,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED324812AF62238007A5594 /* LongTermGoalDetailView.swift in Sources */,
 				80DD917E2ACB05A90054E4A6 /* Todo.swift in Sources */,
 				80DD91822ACB05E90054E4A6 /* TodoDetailView.swift in Sources */,
 				6EBA2F442AA0D0C5009A0FE0 /* TimerView.swift in Sources */,
 				6EBA2F462AA0D0DA009A0FE0 /* LongTermGoalsView.swift in Sources */,
 				6EBA2F312AA0C98D009A0FE0 /* ContentView.swift in Sources */,
 				6EBA2F402AA0D0A3009A0FE0 /* DashboardView.swift in Sources */,
+				6ED3247D2AF6206A007A5594 /* ProgressBar.swift in Sources */,
 				6EBA2F422AA0D0B5009A0FE0 /* ToDoView.swift in Sources */,
 				80D85CDB2AD1EB2100313393 /* Todo+Sample.swift in Sources */,
 				80DD91842ACB111F0054E4A6 /* SearchBar.swift in Sources */,
 				6EBA2F2F2AA0C98D009A0FE0 /* StudifyApp.swift in Sources */,
 				80D85CD92AD1EAFE00313393 /* TodoManager.swift in Sources */,
 				6E9F4D052ACB39C700937208 /* CircularProgressView.swift in Sources */,
+				6ED324832AF624DD007A5594 /* LongTermGoalsManager.swift in Sources */,
+				6ED3247F2AF621CF007A5594 /* LongTermGoalSwift.swift in Sources */,
 				80DD91802ACB05C80054E4A6 /* NewTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
