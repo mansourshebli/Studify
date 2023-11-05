@@ -1,4 +1,3 @@
-//Here I made the search bar.
 import SwiftUI
 
 struct SearchBar: View {

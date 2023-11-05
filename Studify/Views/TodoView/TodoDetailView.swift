@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TodoDetailView: View {
     @Binding var todo: Todo
-    
+
     var body: some View {
         Form {
             Section {

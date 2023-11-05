@@ -9,12 +9,12 @@ struct ToDoView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                SearchBar(searchText: $searchText)
+            List {
+                Section(header: SearchBar(searchText: $searchText)) {
+                    ProgressBar(completionPercentage: todoManager.completionPercentage)
+                }
 
-                ProgressBar(todoManager: todoManager)
-
-                List($todoManager.todos, editActions: [.all]) { $todo in
+                ForEach($todoManager.todos) { $todo in
                     if searchText.isEmpty || todo.title.localizedCaseInsensitiveContains(searchText) {
                         NavigationLink(destination: TodoDetailView(todo: $todo)) {
                             HStack {
@@ -32,8 +32,10 @@ struct ToDoView: View {
                         }
                     }
                 }
-                .listStyle(PlainListStyle())
+                .onDelete(perform: deleteTodo)
+                .onMove(perform: moveTodos)
             }
+            .listStyle(PlainListStyle())
             .navigationTitle("Todos")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -61,7 +63,15 @@ struct ToDoView: View {
             }
         }
     }
+    func deleteTodo(at offsets: IndexSet) {
+        todoManager.todos.remove(atOffsets: offsets)
+    }
+    func moveTodos(from source: IndexSet, to destination: Int) {
+        todoManager.todos.move(fromOffsets: source, toOffset: destination)
+    }
 }
+
+
 
 struct ToDoView_Previews: PreviewProvider {
     static var previews: some View {

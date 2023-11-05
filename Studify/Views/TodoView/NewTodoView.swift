@@ -4,9 +4,9 @@ struct NewTodoView: View {
     @State private var title = ""
     @State private var subtitle = ""
     @Binding var sourceArray: [Todo]
-   
+
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         Form {
             Section {
