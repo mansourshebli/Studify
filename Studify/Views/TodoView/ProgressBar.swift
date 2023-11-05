@@ -25,7 +25,7 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(todoManager: TodoManager()) // Use an instance of TodoManager for the preview
-            .frame(width: 200, height: 20) // Adjust the frame as needed
+        ProgressBar(todoManager: TodoManager())
+            .frame(width: 200, height: 20)
     }
 }

@@ -12,7 +12,7 @@ struct ToDoView: View {
             VStack {
                 SearchBar(searchText: $searchText)
 
-                ProgressBar(todoManager: todoManager) // Pass the TodoManager
+                ProgressBar(todoManager: todoManager)
 
                 List($todoManager.todos, editActions: [.all]) { $todo in
                     if searchText.isEmpty || todo.title.localizedCaseInsensitiveContains(searchText) {
