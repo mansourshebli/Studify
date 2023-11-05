@@ -1,37 +1,44 @@
+//
+//  LongTermGoalsView.swift
+//  Studify
+//
+//  Created by Mansour Mohammed Alshebli on 05/11/2023.
+//
+
 import SwiftUI
 
 struct LongTermGoalsView: View {
-    @ObservedObject var longTermGoalsManager = LongTermGoalsManager() // Create an instance of LongTermGoalsManager
-
+    @State private var longTermGoals = [
+        LongTermGoal(title: "Complete Project A", subtasks: [
+            Subtask(title: "Research"),
+            Subtask(title: "Design"),
+            Subtask(title: "Development"),
+            Subtask(title: "Testing"),
+            Subtask(title: "Documentation"),
+        ]),
+       
+    ]
+    
     var body: some View {
         NavigationView {
-            List($longTermGoalsManager.longTermGoals) { $goal in
-                NavigationLink(destination: LongTermGoalDetailView(goal: goal)) {
+            List($longTermGoals) { $goal in
+                NavigationLink(destination: LongTermGoalDetailView(goal: $goal)) {
                     VStack(alignment: .leading) {
                         Text(goal.title)
                             .font(.headline)
                         
-                        ProgressBar(value: goal.progress)
-                        
-                        if goal.progress < 1.0 {
+                        ProgressView(value: goal.progress)
+                            
                             Text("Tap to view subtasks")
                                 .font(.caption)
                                 .foregroundColor(.blue)
-                        }
                     }
                 }
             }
             .navigationTitle("Long Term Goals")
         }
-        .onAppear {
-            longTermGoalsManager.loadSampleData() // Load sample data if needed
-        }
     }
 }
-
-
-struct LongTermGoalsView_Previews: PreviewProvider {
-    static var previews: some View {
-        LongTermGoalsView()
-    }
+#Preview {
+    LongTermGoalsView()
 }

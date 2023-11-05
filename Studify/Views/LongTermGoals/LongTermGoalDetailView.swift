@@ -2,13 +2,13 @@
 //  LongTermGoalDetailView.swift
 //  Studify
 //
-//  Created by Mansour Mohammed Alshebli on 04/11/2023.
+//  Created by Mansour Mohammed Alshebli on 05/11/2023.
 //
 
 import SwiftUI
 
 struct LongTermGoalDetailView: View {
-    @State var goal: LongTermGoal
+    @Binding var goal: LongTermGoal
     
     var body: some View {
         VStack {
@@ -42,13 +42,12 @@ struct LongTermGoalDetailView: View {
         }
     }
 }
-
 #Preview {
-    LongTermGoalDetailView(goal: LongTermGoal(title: "Complete Project A", subtasks: [
+    LongTermGoalDetailView(goal: .constant(LongTermGoal(title: "Complete Project A", subtasks: [
         Subtask(title: "Research"),
         Subtask(title: "Design"),
         Subtask(title: "Development"),
         Subtask(title: "Testing"),
         Subtask(title: "Documentation"),
-    ]))
+    ])))
 }

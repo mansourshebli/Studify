@@ -1,19 +1,19 @@
 //
-//  LongTermGoalSwift.swift
+//  Goal.swift
 //  Studify
 //
-//  Created by Mansour Mohammed Alshebli on 04/11/2023.
+//  Created by Mansour Mohammed Alshebli on 05/11/2023.
 //
 
 import Foundation
 
-struct Subtask: Identifiable, Codable{
+struct Subtask: Identifiable {
     var id = UUID()
     var title: String
     var isCompleted: Bool = false
 }
 
-struct LongTermGoal: Identifiable, Codable {
+struct LongTermGoal: Identifiable {
     var id = UUID()
     var title: String
     var subtasks: [Subtask]
@@ -23,4 +23,3 @@ struct LongTermGoal: Identifiable, Codable {
         return Double(completedSubtasks.count) / Double(subtasks.count)
     }
 }
-
