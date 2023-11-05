@@ -20,7 +20,7 @@ struct ContentView: View {
             .preferredColorScheme(isDarkMode ? .dark : .light)
 
             TabView {
-                Text("Dashboard")
+                DashboardView()
                     .tabItem {
                         Label("Dashboard", systemImage: "house")
                     }
@@ -30,7 +30,7 @@ struct ContentView: View {
                         Label("ToDo", systemImage: "list.bullet.clipboard")
                     }
                 
-                Text("Timer")
+                TimerView()
                     .tabItem {
                         Label("Timer", systemImage: "timer")
                     }

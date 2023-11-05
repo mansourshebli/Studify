@@ -1,18 +1,31 @@
-//
-//  ProgressBar.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 05/11/2023.
-//
-
 import SwiftUI
 
 struct ProgressBar: View {
+    let todoManager: TodoManager
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            let completedCount = todoManager.todos.filter { $0.isCompleted }.count
+            let totalCount = todoManager.todos.count
+            let completionPercentage = totalCount > 0 ? Double(completedCount) / Double(totalCount) : 0.0
+
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .frame(width: geometry.size.width, height: 10)
+                    .opacity(0.3)
+                    .foregroundColor(Color.blue)
+
+                Rectangle()
+                    .frame(width: min(CGFloat(completionPercentage) * geometry.size.width, geometry.size.width), height: 10)
+                    .foregroundColor(Color.blue)
+            }
+        }
     }
 }
 
-#Preview {
-    ProgressBar()
+struct ProgressBar_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressBar(todoManager: TodoManager()) // Use an instance of TodoManager for the preview
+            .frame(width: 200, height: 20) // Adjust the frame as needed
+    }
 }

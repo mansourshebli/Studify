@@ -7,5 +7,4 @@ struct Todo: Identifiable, Codable {
     var title: String
     var subtitle: String
     var isCompleted = false
-
-}
+    }
