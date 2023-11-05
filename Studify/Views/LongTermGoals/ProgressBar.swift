@@ -20,14 +20,12 @@ struct ProgressBar: View {
                 
                 Rectangle()
                     .frame(width: min(CGFloat(self.value) * geometry.size.width, geometry.size.width), height: 8)
-                    .foregroundColor(.blue)
-                    .animation(.linear)
-            }
+                    .foregroundColor(.blue)            }
         }
     }
 }
 
 
 #Preview {
-    ProgressBar(value: 33.4)
+    ProgressBar(value: 100.0)
 }
