@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PomodoroView: View {
+struct FourFourFourFourMethodView: View {
     @State private var timer: Timer?
     @State private var timerDuration = 240.0 // 4 minutes for work
     @State private var isTimerRunning = false
@@ -11,7 +11,7 @@ struct PomodoroView: View {
 
     var body: some View {
         ZStack {
-            Text(formatTime(Int(timerDuration)))
+            Text(formatTime(Int(timerDuration))
                 .font(.system(size: 80))
                 .bold()
                 .fontDesign(.rounded)
@@ -73,9 +73,9 @@ struct PomodoroView: View {
         .padding()
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text(isBreak ? "Break Time!" : "Pomodoro Finished"),
+                title: Text(isBreak ? "Break Time!" : "Work Session Finished"),
                 message: Text(isBreak ? "Take a 4-minute break?" : (cyclesCompleted < 3 ? "What would you like to do next?" : "Congratulations! You've completed 4 cycles.")),
-                primaryButton: .default(isBreak ? Text("Start Break") : (cyclesCompleted < 3 ? Text("Start New Pomodoro") : Text("End Session"))) {
+                primaryButton: .default(isBreak ? Text("Start Break") : (cyclesCompleted < 3 ? Text("Start New Work Session") : Text("End Session"))) {
                     if isBreak {
                         startBreak()
                     } else {
@@ -155,7 +155,9 @@ struct PomodoroView: View {
     }
 }
 
-
-#Preview {
-    __4_4_4_MethodView()
+// Preview
+struct FourFourFourFourMethodView_Previews: PreviewProvider {
+    static var previews: some View {
+        FourFourFourFourMethodView()
+    }
 }

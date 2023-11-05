@@ -8,21 +8,19 @@
 import Foundation
 import SwiftUI
 
-class LongTermGoalManager: ObservableObject {
-    @Published var longTermGoals: [LongTermGoal] = [] {
+class LongTermGoalsManager: ObservableObject {
+    @Published var goals: [LongTermGoal] = [] {
         didSet {
             save()
         }
     }
-    
+        
     init() {
         load()
     }
     
-
-    
     func getArchiveURL() -> URL {
-        let plistName = "longTermGoals.plist"
+        let plistName = "goals.plist"
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
         return documentsDirectory.appendingPathComponent(plistName)
@@ -31,17 +29,17 @@ class LongTermGoalManager: ObservableObject {
     func save() {
         let archiveURL = getArchiveURL()
         let propertyListEncoder = PropertyListEncoder()
-        let encodedGoals = try? propertyListEncoder.encode(longTermGoals)
-        try? encodedGoals?.write(to: archiveURL, options: .noFileProtection)
+        let encodedLongTermGoals = try? propertyListEncoder.encode(goals)
+        try? encodedLongTermGoals?.write(to: archiveURL, options: .noFileProtection)
     }
     
     func load() {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
                 
-        if let retrievedData = try? Data(contentsOf: archiveURL),
-            let goalsDecoded = try? propertyListDecoder.decode([LongTermGoal].self, from: retrievedData) {
-            longTermGoals = goalsDecoded
+        if let retrievedLongTermGoalData = try? Data(contentsOf: archiveURL),
+            let goalsDecoded = try? propertyListDecoder.decode([LongTermGoal].self, from: retrievedLongTermGoalData) {
+            goals = goalsDecoded
         }
     }
 }

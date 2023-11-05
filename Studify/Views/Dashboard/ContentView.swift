@@ -35,7 +35,7 @@ struct ContentView: View {
                         Label("Timer", systemImage: "timer")
                     }
                 
-                Text("Goals")
+                LongTermGoalsView()
                     .tabItem {
                         Label("Goals", systemImage: "star")
                     }

@@ -9,28 +9,11 @@ import SwiftUI
 
 struct LongTermGoalsView: View {
     @State private var showSheet = false
-    @State private var longTermGoals = [
-        LongTermGoal(title: "Complete Project A", subtasks: [
-            Subtask(title: "Research"),
-            Subtask(title: "Design"),
-            Subtask(title: "Development"),
-            Subtask(title: "Testing"),
-            Subtask(title: "Documentation"),
-        ]),
-       
-        LongTermGoal(title: "Complete Project B", subtasks: [
-            Subtask(title: "Research"),
-            Subtask(title: "Design"),
-            Subtask(title: "Development"),
-            Subtask(title: "Testing"),
-            Subtask(title: "Documentation"),
-        ]),
-        
-    ]
+    @StateObject var goalManager = LongTermGoalsManager()
     
     var body: some View {
         NavigationView {
-            List($longTermGoals, editActions: [.all]) { $goal in
+            List($goalManager.goals, editActions: [.all]) { $goal in
                 NavigationLink(destination: LongTermGoalDetailView(goal: $goal)) {
                     VStack(alignment: .leading) {
                         Text(goal.title)
@@ -42,6 +25,7 @@ struct LongTermGoalsView: View {
                                 .font(.caption)
                                 .foregroundColor(.blue)
                     }
+                    
                 }
             }
             .navigationTitle("Long Term Goals")
@@ -58,7 +42,7 @@ struct LongTermGoalsView: View {
                 }
             }
             .sheet(isPresented: $showSheet) {
-                NewLongTermGoal(sourceArray: $longTermGoals)
+                NewLongTermGoal(sourceArray: $goalManager.goals)
             }
             
         }
