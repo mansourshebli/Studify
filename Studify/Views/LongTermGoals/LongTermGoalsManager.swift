@@ -8,22 +8,21 @@
 import Foundation
 import SwiftUI
 
-class TodoManager: ObservableObject {
-    @Published var todos: [Todo] = [] {
+class LongTermGoalManager: ObservableObject {
+    @Published var longTermGoals: [LongTermGoal] = [] {
         didSet {
             save()
         }
     }
+    
     init() {
         load()
     }
     
-    func loadSampleData() {
-        todos = Todo.sampleTodos
-    }
+
     
     func getArchiveURL() -> URL {
-        let plistName = "todos.plist"
+        let plistName = "longTermGoals.plist"
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
         return documentsDirectory.appendingPathComponent(plistName)
@@ -32,17 +31,17 @@ class TodoManager: ObservableObject {
     func save() {
         let archiveURL = getArchiveURL()
         let propertyListEncoder = PropertyListEncoder()
-        let encodedTodos = try? propertyListEncoder.encode(todos)
-        try? encodedTodos?.write(to: archiveURL, options: .noFileProtection)
+        let encodedGoals = try? propertyListEncoder.encode(longTermGoals)
+        try? encodedGoals?.write(to: archiveURL, options: .noFileProtection)
     }
     
     func load() {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
                 
-        if let retrievedTodoData = try? Data(contentsOf: archiveURL),
-            let todosDecoded = try? propertyListDecoder.decode([Todo].self, from: retrievedTodoData) {
-            todos = todosDecoded
+        if let retrievedData = try? Data(contentsOf: archiveURL),
+            let goalsDecoded = try? propertyListDecoder.decode([LongTermGoal].self, from: retrievedData) {
+            longTermGoals = goalsDecoded
         }
     }
 }

@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Subtask: Identifiable {
+struct Subtask: Identifiable, Codable {
     var id = UUID()
     var title: String
     var isCompleted: Bool = false
 }
 
-struct LongTermGoal: Identifiable {
+struct LongTermGoal: Identifiable, Codable {
     var id = UUID()
     var title: String
     var subtasks: [Subtask]
