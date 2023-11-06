@@ -1,18 +1,37 @@
-//
-//  DashboardView.swift
-//  Studify
-//
-//  Created by Abdulla Saeed Alblooshi on 05/11/2023.
-//
-
 import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                HStack{
+                    Text("    Gonna be productive today 😎").font(.title2)
+                    Spacer()
+                    }
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 20) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(height: 200)
+                            .foregroundColor(.blue)
+                            .overlay(
+                                Text("Item")
+                                    .foregroundColor(.white)
+                                    .font(.title)
+                            )
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: 200)
+                        .foregroundColor(.blue)
+                        .overlay(
+                            Text("Item")
+                                .foregroundColor(.white)
+                                .font(.title)
+                        )
+                }
+                .padding()
+            }
+            .navigationTitle("Dashboard")
+        }
     }
 }
-
 #Preview {
     DashboardView()
 }
