@@ -16,7 +16,6 @@ struct NewTodoView: View {
             Section {
                 Button("Save") {
                     let todo = Todo(
-                        id: UUID(),
                         title: title,
                         subtitle: subtitle,
                         isCompleted: false

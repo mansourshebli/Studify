@@ -1,8 +1,15 @@
 import Foundation
+import SwiftUI
 
 struct Todo: Identifiable, Codable {
-    var id = UUID()
+    
+    // A computed property to generate a unique identifier for each Todo item
+    let id = UUID()
+    
+    // Properties to store the title, subtitle, color, due date, and completion status of a Todo item
     var title: String
-    var subtitle: String
+    var subtitle = ""
+    var todoDueDate = Date()
     var isCompleted = false
 }
+
