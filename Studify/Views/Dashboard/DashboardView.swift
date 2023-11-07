@@ -8,7 +8,7 @@ struct DashboardView: View {
             
             Image("menu")
                 .frame(width: 20, height: 20)
-                .position(x: 45, y: 35)
+                .position(x: 45, y: 50)
 
             Text("Hi, Mansour 👋 ")
                 .font(
@@ -16,7 +16,8 @@ struct DashboardView: View {
                 )
                 .multilineTextAlignment(.center)
                 .frame(width: 300, alignment: .top)
-                .position(x: 200, y: 35)
+                .position(x: 200, y: 50)
+            
             
             
             Button {
@@ -28,7 +29,7 @@ struct DashboardView: View {
                     .frame(width: 40, height: 40)
                     .foregroundColor(isDarkMode ? .white : .black)
             }
-            .position(x: 340, y: 35)
+            .position(x: 340, y: 50)
             .preferredColorScheme(isDarkMode ? .dark : .light)
             
         }

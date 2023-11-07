@@ -76,7 +76,6 @@
 		6E1863D82AF7702000711A36 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */,
 				80EEF3222AF7B83B00A83AF1 /* DashboardView.swift */,
 			);
 			path = Dashboard;
@@ -156,6 +155,7 @@
 		6EBA2F3E2AA0CF1B009A0FE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6EBA2F302AA0C98D009A0FE0 /* ContentView.swift */,
 				6E1863D82AF7702000711A36 /* Dashboard */,
 				6EB067FD2ACEF58200C569F1 /* LongTermGoals */,
 				80DD917C2ACB04FF0054E4A6 /* TodoView */,
