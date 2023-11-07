@@ -7,7 +7,7 @@ struct DashboardView: View {
         ZStack {
             
             Image("menu")
-                .frame(width: 32, height: 32)
+                .frame(width: 20, height: 20)
                 .position(x: 45, y: 35)
 
             Text("Hi, Mansour 👋 ")

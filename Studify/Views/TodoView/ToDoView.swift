@@ -5,8 +5,7 @@ struct ToDoView: View {
 
     @State private var searchText = ""
     @State private var showSheet = false
-    @State private var showConfirmAlert = false
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -43,11 +42,6 @@ struct ToDoView: View {
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
-                        showConfirmAlert = true
-                    } label: {
-                        Image(systemName: "clipboard.fill")
-                    }
-                    Button {
                         showSheet = true
                     } label: {
                         Image(systemName: "plus")
@@ -56,10 +50,6 @@ struct ToDoView: View {
             }
             .sheet(isPresented: $showSheet) {
                 NewTodoView(sourceArray: $todoManager.todos).presentationDetents([.medium])
-            }.alert("Load sample data? WARNING: All existing todos will be deleted.", isPresented: $showConfirmAlert) {
-                Button("Replace", role: .destructive) {
-                    todoManager.loadSampleData()
-                }
             }
         }
     }
