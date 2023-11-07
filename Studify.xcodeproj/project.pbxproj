@@ -15,6 +15,8 @@
 		6E1B2DF22AF601BE00AF507B /* TimerTechniquesViews in Resources */ = {isa = PBXBuildFile; fileRef = 6E1B2DF12AF601BD00AF507B /* TimerTechniquesViews */; };
 		6E3D4D122AFA716700FD19F5 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D4D112AFA716700FD19F5 /* info.plist */; };
 		6E3D4D152AFA746300FD19F5 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */; };
+		6E48E0282AFA7ACF0036537C /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E48E0272AFA7ACF0036537C /* Rubik-Bold.ttf */; };
+		6E48E02A2AFA7AE70036537C /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E48E0292AFA7AE70036537C /* Rubik-Italic.ttf */; };
 		6E9F4D052ACB39C700937208 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F4D042ACB39C700937208 /* CircularProgressView.swift */; };
 		6EB0DF202AF7C573006D4941 /* GoalSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0DF1F2AF7C573006D4941 /* GoalSample.swift */; };
 		6EBA2F2F2AA0C98D009A0FE0 /* StudifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */; };
@@ -43,6 +45,8 @@
 		6E3D4D112AFA716700FD19F5 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = info.plist; sourceTree = "<group>"; };
 		6E3D4D132AFA739B00FD19F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		6E48E0272AFA7ACF0036537C /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		6E48E0292AFA7AE70036537C /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		6E9F4D042ACB39C700937208 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		6EB0DF1F2AF7C573006D4941 /* GoalSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSample.swift; sourceTree = "<group>"; };
 		6EBA2F2B2AA0C98D009A0FE0 /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +89,9 @@
 		6E3D4D162AFA74B300FD19F5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6E48E0272AFA7ACF0036537C /* Rubik-Bold.ttf */,
 				6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */,
+				6E48E0292AFA7AE70036537C /* Rubik-Italic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3D4D122AFA716700FD19F5 /* info.plist in Resources */,
+				6E48E0282AFA7ACF0036537C /* Rubik-Bold.ttf in Resources */,
 				6EBA2F362AA0C98E009A0FE0 /* Preview Assets.xcassets in Resources */,
 				6EBA2F332AA0C98E009A0FE0 /* Assets.xcassets in Resources */,
+				6E48E02A2AFA7AE70036537C /* Rubik-Italic.ttf in Resources */,
 				6E3D4D152AFA746300FD19F5 /* Rubik-Regular.ttf in Resources */,
 				6E1B2DF22AF601BE00AF507B /* TimerTechniquesViews in Resources */,
 			);

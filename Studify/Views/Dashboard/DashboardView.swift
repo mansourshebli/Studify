@@ -1,21 +1,34 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @AppStorage("isDarkMode") private var isDarkMode = false
+
     var body: some View {
         ZStack {
+            
             Image("menu")
                 .frame(width: 32, height: 32)
                 .position(x: 45, y: 35)
 
             Text("Hi, Mansour 👋 ")
                 .font(
-                    Font.custom("Rubik-Regular", size: 20)
-                        .weight(.bold)
+                    Font.custom("Rubik-Regular", size: 26)
                 )
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0.18, green: 0.23, blue: 0.44))
-                .frame(width: 141, alignment: .top)
+                .frame(width: 300, alignment: .top)
                 .position(x: 200, y: 35)
+            
+            Button {
+                isDarkMode.toggle()
+            } label: {
+                Image(systemName: isDarkMode ? "moon" : "sun.max")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 48, height: 48)
+                    .foregroundColor(isDarkMode ? .white : .black)
+            }
+            .position(x: 340, y: 35)
+            .preferredColorScheme(isDarkMode ? .dark : .light)
             
             Rectangle()
               .foregroundColor(.clear)
