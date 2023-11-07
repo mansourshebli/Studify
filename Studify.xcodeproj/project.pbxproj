@@ -32,7 +32,6 @@
 		80DD91822ACB05E90054E4A6 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD91812ACB05E90054E4A6 /* TodoDetailView.swift */; };
 		80DD91842ACB111F0054E4A6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD91832ACB111F0054E4A6 /* SearchBar.swift */; };
 		80EEF3232AF7B83B00A83AF1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EEF3222AF7B83B00A83AF1 /* DashboardView.swift */; };
-		80EEF3252AF7D9A200A83AF1 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EEF3242AF7D9A200A83AF1 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +62,6 @@
 		80DD91812ACB05E90054E4A6 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		80DD91832ACB111F0054E4A6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		80EEF3222AF7B83B00A83AF1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		80EEF3242AF7D9A200A83AF1 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,6 @@
 			children = (
 				6EBA2F412AA0D0B5009A0FE0 /* ToDoView.swift */,
 				80DD91832ACB111F0054E4A6 /* SearchBar.swift */,
-				80EEF3242AF7D9A200A83AF1 /* ProgressBar.swift */,
 				80DD917D2ACB05A90054E4A6 /* Todo.swift */,
 				80DD917F2ACB05C80054E4A6 /* NewTodoView.swift */,
 				80DD91812ACB05E90054E4A6 /* TodoDetailView.swift */,
@@ -259,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80DD917E2ACB05A90054E4A6 /* Todo.swift in Sources */,
-				80EEF3252AF7D9A200A83AF1 /* ProgressBar.swift in Sources */,
 				80DD91822ACB05E90054E4A6 /* TodoDetailView.swift in Sources */,
 				6EB0DF202AF7C573006D4941 /* GoalSample.swift in Sources */,
 				6EBA2F442AA0D0C5009A0FE0 /* TimerView.swift in Sources */,
