@@ -13,6 +13,8 @@
 		6E1863EA2AF78B9400711A36 /* NewLongTermGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1863E92AF78B9400711A36 /* NewLongTermGoal.swift */; };
 		6E1863EC2AF7935E00711A36 /* LongTermGoalsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1863EB2AF7935E00711A36 /* LongTermGoalsManager.swift */; };
 		6E1B2DF22AF601BE00AF507B /* TimerTechniquesViews in Resources */ = {isa = PBXBuildFile; fileRef = 6E1B2DF12AF601BD00AF507B /* TimerTechniquesViews */; };
+		6E3D4D122AFA716700FD19F5 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D4D112AFA716700FD19F5 /* info.plist */; };
+		6E3D4D152AFA746300FD19F5 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */; };
 		6E9F4D052ACB39C700937208 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F4D042ACB39C700937208 /* CircularProgressView.swift */; };
 		6EB0DF202AF7C573006D4941 /* GoalSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0DF1F2AF7C573006D4941 /* GoalSample.swift */; };
 		6EBA2F2F2AA0C98D009A0FE0 /* StudifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */; };
@@ -38,6 +40,9 @@
 		6E1863E92AF78B9400711A36 /* NewLongTermGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLongTermGoal.swift; sourceTree = "<group>"; };
 		6E1863EB2AF7935E00711A36 /* LongTermGoalsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermGoalsManager.swift; sourceTree = "<group>"; };
 		6E1B2DF12AF601BD00AF507B /* TimerTechniquesViews */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TimerTechniquesViews; sourceTree = "<group>"; };
+		6E3D4D112AFA716700FD19F5 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = info.plist; sourceTree = "<group>"; };
+		6E3D4D132AFA739B00FD19F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		6E9F4D042ACB39C700937208 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		6EB0DF1F2AF7C573006D4941 /* GoalSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSample.swift; sourceTree = "<group>"; };
 		6EBA2F2B2AA0C98D009A0FE0 /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,14 @@
 				80EEF3222AF7B83B00A83AF1 /* DashboardView.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6E3D4D162AFA74B300FD19F5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6E3D4D142AFA746300FD19F5 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6E9F4D032ACB389700937208 /* TimerView */ = {
@@ -119,10 +132,13 @@
 		6EBA2F2D2AA0C98D009A0FE0 /* Studify */ = {
 			isa = PBXGroup;
 			children = (
+				6E3D4D162AFA74B300FD19F5 /* Fonts */,
 				6EBA2F3E2AA0CF1B009A0FE0 /* Views */,
 				6EBA2F322AA0C98E009A0FE0 /* Assets.xcassets */,
 				6EBA2F2E2AA0C98D009A0FE0 /* StudifyApp.swift */,
 				6EBA2F342AA0C98E009A0FE0 /* Preview Content */,
+				6E3D4D112AFA716700FD19F5 /* info.plist */,
+				6E3D4D132AFA739B00FD19F5 /* Info.plist */,
 			);
 			path = Studify;
 			sourceTree = "<group>";
@@ -219,8 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3D4D122AFA716700FD19F5 /* info.plist in Resources */,
 				6EBA2F362AA0C98E009A0FE0 /* Preview Assets.xcassets in Resources */,
 				6EBA2F332AA0C98E009A0FE0 /* Assets.xcassets in Resources */,
+				6E3D4D152AFA746300FD19F5 /* Rubik-Regular.ttf in Resources */,
 				6E1B2DF22AF601BE00AF507B /* TimerTechniquesViews in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +403,7 @@
 				DEVELOPMENT_TEAM = MLF68LT52L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Studify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -417,6 +436,7 @@
 				DEVELOPMENT_TEAM = MLF68LT52L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Studify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
