@@ -1,8 +1,9 @@
 import SwiftUI
 
-struct The5217MethodView: View {
+
+struct PomodoroView: View {
     @State private var timer: Timer?
-    @State private var timerDuration = 3120.0 // 52 minutes for work
+    @State private var timerDuration = 1500.0 // 25 minutes
     @State private var isTimerRunning = false
     @State private var showAlert = false
     @State private var isBreak = false
@@ -10,59 +11,59 @@ struct The5217MethodView: View {
 
     var body: some View {
         ZStack {
-            Text(formatTime(Int(timerDuration))
-            .font(.system(size: 80))
-            .bold()
-            .fontDesign(.rounded)
-
+            Text(formatTime(Int(timerDuration)))
+                .font(.system(size: 80))
+                .bold()
+                .fontDesign(.rounded)
+            
             CircularProgressView(timerProgress: $timerProgress)
-            .padding()
-
+                .padding()
+            
             HStack {
                 withAnimation(.easeIn){
                     Button {
                         startTimer()
                     } label: {
                         Text("Start")
-                        .font(.title2)
-                        .bold()
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.green)
-                        .cornerRadius(8)
-                        .shadow(color: Color.green, radius: 20, y: 5)
+                            .font(.title2)
+                            .bold()
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(8)
+                            .shadow(color: Color.green, radius: 20, y: 5)
                     }
                     .disabled(isTimerRunning)
                 }
-
+                
                 withAnimation(.easeIn){
                     Button {
                         pauseTimer()
                     } label: {
                         Text("Pause")
-                        .font(.title2)
-                        .bold()
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.yellow)
-                        .cornerRadius(8)
-                        .shadow(color: Color.yellow, radius: 20, y: 5)
+                            .font(.title2)
+                            .bold()
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.yellow)
+                            .cornerRadius(8)
+                            .shadow(color: Color.yellow, radius: 20, y: 5)
                     }
                     .disabled(!isTimerRunning)
                 }
-
+                
                 withAnimation(.easeIn){
                     Button {
                         endTimer()
                     } label: {
                         Text("End")
-                        .font(.title2)
-                        .bold()
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.red)
-                        .cornerRadius(8)
-                        .shadow(color: Color.red, radius: 20, y: 5)
+                            .font(.title2)
+                            .bold()
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.red)
+                            .cornerRadius(8)
+                            .shadow(color: Color.red, radius: 20, y: 5)
                     }
                     .disabled(!isTimerRunning)
                 }
@@ -72,9 +73,9 @@ struct The5217MethodView: View {
         .padding()
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text(isBreak ? "Break Time!" : "Work Session Finished"),
-                message: Text(isBreak ? "Take a 17-minute break?" : "What would you like to do next?"),
-                primaryButton: .default(isBreak ? Text("Start Break") : Text("Start New Work Session")) {
+                title: Text(isBreak ? "Break Time!" : "Pomodoro Finished"),
+                message: Text(isBreak ? "Take a 5-minute break?" : "What would you like to do next?"),
+                primaryButton: .default(isBreak ? Text("Start Break") : Text("Start New Pomodoro")) {
                     if isBreak {
                         startBreak()
                     } else {
@@ -106,7 +107,7 @@ struct The5217MethodView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             if timerDuration > 0 {
                 timerDuration -= 1
-                timerProgress = timerDuration / 3120.0 // Update the progress
+                timerProgress = timerDuration / 1500.0 // Update the progress
             } else {
                 timer?.invalidate()
                 showAlert = true
@@ -123,13 +124,13 @@ struct The5217MethodView: View {
 
     func endTimer() {
         timer?.invalidate()
-        timerDuration = 3120.0 // Reset to 52 minutes for work
+        timerDuration = 1500.0 // Reset to 25 minutes
         timerProgress = 1.0 // Reset progress
         isTimerRunning = false
     }
 
     func startBreak() {
-        timerDuration = 1020.0 // 17 minutes for break
+        timerDuration = 300.0 // 5 minutes break
         showAlert = false
         isBreak = true
         startTimer()
@@ -137,7 +138,7 @@ struct The5217MethodView: View {
 
     func endSession() {
         timer?.invalidate()
-        timerDuration = 3120.0 // Reset to 52 minutes for work
+        timerDuration = 1500.0 // Reset to 25 minutes
         timerProgress = 1.0 // Reset progress
         isTimerRunning = false
     }
@@ -145,14 +146,11 @@ struct The5217MethodView: View {
     // Helper function to update progress even when paused
     private func startTimerProgressUpdate() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            timerProgress = timerDuration / 3120.0 // Update the progress
+            timerProgress = timerDuration / 1500.0 // Update the progress
         }
     }
 }
 
-// Preview
-struct The5217MethodView_Previews: PreviewProvider {
-    static var previews: some View {
-        The5217MethodView()
-    }
+#Preview {
+    PomodoroView()
 }
