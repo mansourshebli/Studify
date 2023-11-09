@@ -79,7 +79,13 @@ struct Home: View {
                 .cornerRadius(12)
             )
             .padding(.horizontal)
-            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+            .padding(.bottom, UIApplication.shared.connectedScenes
+                                        .compactMap { $0 as? UIWindowScene }
+                                        .first?
+                                        .windows
+                                        .first?
+                                        .safeAreaInsets.bottom ?? 0)
+
         }
         .ignoresSafeArea(.all, edges: .bottom)
     }
