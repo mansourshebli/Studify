@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E0749A82AFDB7BF00D159D3 /* Studify_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0749A72AFDB7BF00D159D3 /* Studify_AppApp.swift */; };
+		6E0749AC2AFDB7C000D159D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0749AB2AFDB7C000D159D3 /* Assets.xcassets */; };
+		6E0749AF2AFDB7C000D159D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0749AE2AFDB7C000D159D3 /* Preview Assets.xcassets */; };
+		6EE2A3032AFDBB0A005547F6 /* LongTermGoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2E92AFDBB0A005547F6 /* LongTermGoalDetailView.swift */; };
+		6EE2A3042AFDBB0A005547F6 /* LongTermGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2EA2AFDBB0A005547F6 /* LongTermGoalsView.swift */; };
+		6EE2A3052AFDBB0A005547F6 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2EB2AFDBB0A005547F6 /* Goal.swift */; };
+		6EE2A3062AFDBB0A005547F6 /* GoalSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2EC2AFDBB0A005547F6 /* GoalSample.swift */; };
+		6EE2A3072AFDBB0A005547F6 /* NewLongTermGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2ED2AFDBB0A005547F6 /* NewLongTermGoal.swift */; };
+		6EE2A3082AFDBB0A005547F6 /* LongTermGoalsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2EE2AFDBB0A005547F6 /* LongTermGoalsManager.swift */; };
+		6EE2A30A2AFDBB0A005547F6 /* The50-10RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F12AFDBB0A005547F6 /* The50-10RuleView.swift */; };
+		6EE2A30B2AFDBB0A005547F6 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F22AFDBB0A005547F6 /* CircularProgressView.swift */; };
+		6EE2A30C2AFDBB0A005547F6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F32AFDBB0A005547F6 /* TimerView.swift */; };
+		6EE2A30D2AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F42AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift */; };
+		6EE2A30E2AFDBB0A005547F6 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F52AFDBB0A005547F6 /* PomodoroView.swift */; };
+		6EE2A3102AFDBB0A005547F6 /* The-52-17-MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2F82AFDBB0A005547F6 /* The-52-17-MethodView.swift */; };
+		6EE2A3112AFDBB0A005547F6 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2FA2AFDBB0A005547F6 /* DashboardView.swift */; };
+		6EE2A3122AFDBB0A005547F6 /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2FC2AFDBB0A005547F6 /* NewTodoView.swift */; };
+		6EE2A3132AFDBB0A005547F6 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2FD2AFDBB0A005547F6 /* ToDoView.swift */; };
+		6EE2A3142AFDBB0A005547F6 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2FE2AFDBB0A005547F6 /* TodoDetailView.swift */; };
+		6EE2A3152AFDBB0A005547F6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A2FF2AFDBB0A005547F6 /* SearchBar.swift */; };
+		6EE2A3162AFDBB0A005547F6 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A3002AFDBB0A005547F6 /* TodoManager.swift */; };
+		6EE2A3172AFDBB0A005547F6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A3012AFDBB0A005547F6 /* Todo.swift */; };
+		6EE2A3182AFDBB0A005547F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2A3022AFDBB0A005547F6 /* ContentView.swift */; };
+		6EE2A31D2AFDBBA4005547F6 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE2A31A2AFDBBA4005547F6 /* Rubik-Bold.ttf */; };
+		6EE2A31E2AFDBBA4005547F6 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE2A31B2AFDBBA4005547F6 /* Rubik-Italic.ttf */; };
+		6EE2A31F2AFDBBA4005547F6 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE2A31C2AFDBBA4005547F6 /* Rubik-Regular.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6E0749A42AFDB7BF00D159D3 /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0749A72AFDB7BF00D159D3 /* Studify_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studify_AppApp.swift; sourceTree = "<group>"; };
+		6E0749AB2AFDB7C000D159D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E0749AE2AFDB7C000D159D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E0749BF2AFDB89100D159D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6EE2A2E92AFDBB0A005547F6 /* LongTermGoalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTermGoalDetailView.swift; sourceTree = "<group>"; };
+		6EE2A2EA2AFDBB0A005547F6 /* LongTermGoalsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTermGoalsView.swift; sourceTree = "<group>"; };
+		6EE2A2EB2AFDBB0A005547F6 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		6EE2A2EC2AFDBB0A005547F6 /* GoalSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalSample.swift; sourceTree = "<group>"; };
+		6EE2A2ED2AFDBB0A005547F6 /* NewLongTermGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLongTermGoal.swift; sourceTree = "<group>"; };
+		6EE2A2EE2AFDBB0A005547F6 /* LongTermGoalsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTermGoalsManager.swift; sourceTree = "<group>"; };
+		6EE2A2F12AFDBB0A005547F6 /* The50-10RuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "The50-10RuleView.swift"; sourceTree = "<group>"; };
+		6EE2A2F22AFDBB0A005547F6 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		6EE2A2F32AFDBB0A005547F6 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		6EE2A2F42AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "4-4-4-4-MethodView.swift"; sourceTree = "<group>"; };
+		6EE2A2F52AFDBB0A005547F6 /* PomodoroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
+		6EE2A2F82AFDBB0A005547F6 /* The-52-17-MethodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "The-52-17-MethodView.swift"; sourceTree = "<group>"; };
+		6EE2A2FA2AFDBB0A005547F6 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		6EE2A2FC2AFDBB0A005547F6 /* NewTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
+		6EE2A2FD2AFDBB0A005547F6 /* ToDoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		6EE2A2FE2AFDBB0A005547F6 /* TodoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		6EE2A2FF2AFDBB0A005547F6 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		6EE2A3002AFDBB0A005547F6 /* TodoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		6EE2A3012AFDBB0A005547F6 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		6EE2A3022AFDBB0A005547F6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6EE2A31A2AFDBBA4005547F6 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		6EE2A31B2AFDBBA4005547F6 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		6EE2A31C2AFDBBA4005547F6 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E0749A12AFDB7BE00D159D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E07499B2AFDB7BE00D159D3 = {
+			isa = PBXGroup;
+			children = (
+				6E0749A62AFDB7BF00D159D3 /* Studify */,
+				6E0749A52AFDB7BF00D159D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E0749A52AFDB7BF00D159D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E0749A42AFDB7BF00D159D3 /* Studify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E0749A62AFDB7BF00D159D3 /* Studify */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A3192AFDBBA4005547F6 /* Fonts */,
+				6EE2A2E72AFDBB0A005547F6 /* Views */,
+				6E0749BF2AFDB89100D159D3 /* Info.plist */,
+				6E0749AB2AFDB7C000D159D3 /* Assets.xcassets */,
+				6E0749A72AFDB7BF00D159D3 /* Studify_AppApp.swift */,
+				6E0749AD2AFDB7C000D159D3 /* Preview Content */,
+			);
+			path = Studify;
+			sourceTree = "<group>";
+			wrapsLines = 1;
+		};
+		6E0749AD2AFDB7C000D159D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6E0749AE2AFDB7C000D159D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6EE2A2E72AFDBB0A005547F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A3022AFDBB0A005547F6 /* ContentView.swift */,
+				6EE2A2F92AFDBB0A005547F6 /* Dashboard */,
+				6EE2A2E82AFDBB0A005547F6 /* LongTermGoals */,
+				6EE2A2FB2AFDBB0A005547F6 /* TodoView */,
+				6EE2A2F02AFDBB0A005547F6 /* TimerView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EE2A2E82AFDBB0A005547F6 /* LongTermGoals */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A2E92AFDBB0A005547F6 /* LongTermGoalDetailView.swift */,
+				6EE2A2EA2AFDBB0A005547F6 /* LongTermGoalsView.swift */,
+				6EE2A2EB2AFDBB0A005547F6 /* Goal.swift */,
+				6EE2A2EC2AFDBB0A005547F6 /* GoalSample.swift */,
+				6EE2A2ED2AFDBB0A005547F6 /* NewLongTermGoal.swift */,
+				6EE2A2EE2AFDBB0A005547F6 /* LongTermGoalsManager.swift */,
+			);
+			path = LongTermGoals;
+			sourceTree = "<group>";
+		};
+		6EE2A2F02AFDBB0A005547F6 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A2F12AFDBB0A005547F6 /* The50-10RuleView.swift */,
+				6EE2A2F22AFDBB0A005547F6 /* CircularProgressView.swift */,
+				6EE2A2F32AFDBB0A005547F6 /* TimerView.swift */,
+				6EE2A2F42AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift */,
+				6EE2A2F52AFDBB0A005547F6 /* PomodoroView.swift */,
+				6EE2A2F82AFDBB0A005547F6 /* The-52-17-MethodView.swift */,
+			);
+			path = TimerView;
+			sourceTree = "<group>";
+		};
+		6EE2A2F92AFDBB0A005547F6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A2FA2AFDBB0A005547F6 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6EE2A2FB2AFDBB0A005547F6 /* TodoView */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A2FC2AFDBB0A005547F6 /* NewTodoView.swift */,
+				6EE2A2FD2AFDBB0A005547F6 /* ToDoView.swift */,
+				6EE2A2FE2AFDBB0A005547F6 /* TodoDetailView.swift */,
+				6EE2A2FF2AFDBB0A005547F6 /* SearchBar.swift */,
+				6EE2A3002AFDBB0A005547F6 /* TodoManager.swift */,
+				6EE2A3012AFDBB0A005547F6 /* Todo.swift */,
+			);
+			path = TodoView;
+			sourceTree = "<group>";
+		};
+		6EE2A3192AFDBBA4005547F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A31A2AFDBBA4005547F6 /* Rubik-Bold.ttf */,
+				6EE2A31B2AFDBBA4005547F6 /* Rubik-Italic.ttf */,
+				6EE2A31C2AFDBBA4005547F6 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E0749A32AFDB7BE00D159D3 /* Studify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0749B22AFDB7C000D159D3 /* Build configuration list for PBXNativeTarget "Studify" */;
+			buildPhases = (
+				6E0749A02AFDB7BE00D159D3 /* Sources */,
+				6E0749A12AFDB7BE00D159D3 /* Frameworks */,
+				6E0749A22AFDB7BE00D159D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Studify;
+			productName = "Studify-App";
+			productReference = 6E0749A42AFDB7BF00D159D3 /* Studify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E07499C2AFDB7BE00D159D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					6E0749A32AFDB7BE00D159D3 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 6E07499F2AFDB7BE00D159D3 /* Build configuration list for PBXProject "Studify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E07499B2AFDB7BE00D159D3;
+			productRefGroup = 6E0749A52AFDB7BF00D159D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E0749A32AFDB7BE00D159D3 /* Studify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E0749A22AFDB7BE00D159D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE2A31E2AFDBBA4005547F6 /* Rubik-Italic.ttf in Resources */,
+				6E0749AF2AFDB7C000D159D3 /* Preview Assets.xcassets in Resources */,
+				6EE2A31D2AFDBBA4005547F6 /* Rubik-Bold.ttf in Resources */,
+				6EE2A31F2AFDBBA4005547F6 /* Rubik-Regular.ttf in Resources */,
+				6E0749AC2AFDB7C000D159D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E0749A02AFDB7BE00D159D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE2A3052AFDBB0A005547F6 /* Goal.swift in Sources */,
+				6EE2A3122AFDBB0A005547F6 /* NewTodoView.swift in Sources */,
+				6EE2A3112AFDBB0A005547F6 /* DashboardView.swift in Sources */,
+				6EE2A3072AFDBB0A005547F6 /* NewLongTermGoal.swift in Sources */,
+				6EE2A3082AFDBB0A005547F6 /* LongTermGoalsManager.swift in Sources */,
+				6EE2A30D2AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift in Sources */,
+				6EE2A3032AFDBB0A005547F6 /* LongTermGoalDetailView.swift in Sources */,
+				6EE2A3062AFDBB0A005547F6 /* GoalSample.swift in Sources */,
+				6EE2A3102AFDBB0A005547F6 /* The-52-17-MethodView.swift in Sources */,
+				6EE2A3042AFDBB0A005547F6 /* LongTermGoalsView.swift in Sources */,
+				6EE2A30C2AFDBB0A005547F6 /* TimerView.swift in Sources */,
+				6EE2A3172AFDBB0A005547F6 /* Todo.swift in Sources */,
+				6EE2A30A2AFDBB0A005547F6 /* The50-10RuleView.swift in Sources */,
+				6EE2A3142AFDBB0A005547F6 /* TodoDetailView.swift in Sources */,
+				6EE2A3162AFDBB0A005547F6 /* TodoManager.swift in Sources */,
+				6EE2A30E2AFDBB0A005547F6 /* PomodoroView.swift in Sources */,
+				6EE2A3182AFDBB0A005547F6 /* ContentView.swift in Sources */,
+				6EE2A30B2AFDBB0A005547F6 /* CircularProgressView.swift in Sources */,
+				6E0749A82AFDB7BF00D159D3 /* Studify_AppApp.swift in Sources */,
+				6EE2A3152AFDBB0A005547F6 /* SearchBar.swift in Sources */,
+				6EE2A3132AFDBB0A005547F6 /* ToDoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6E0749B02AFDB7C000D159D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E0749B12AFDB7C000D159D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E0749B32AFDB7C000D159D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Studify/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Studify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mansour.Studify-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E0749B42AFDB7C000D159D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Studify/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Studify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mansour.Studify-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E07499F2AFDB7BE00D159D3 /* Build configuration list for PBXProject "Studify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0749B02AFDB7C000D159D3 /* Debug */,
+				6E0749B12AFDB7C000D159D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0749B22AFDB7C000D159D3 /* Build configuration list for PBXNativeTarget "Studify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0749B32AFDB7C000D159D3 /* Debug */,
+				6E0749B42AFDB7C000D159D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E07499C2AFDB7BE00D159D3 /* Project object */;
+}
