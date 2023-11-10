@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WorkBreakTimerView: View {
+struct Method5010TimerView: View {
     @State private var timer: Timer?
     @State private var timerDuration = 3000.0 // 50 minutes
     @State private var isTimerRunning = false
@@ -158,6 +158,6 @@ struct WorkBreakTimerView: View {
 }
 
 #Preview {
-    WorkBreakTimerView()
+    Method5010TimerView()
 }
 
