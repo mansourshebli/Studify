@@ -14,9 +14,11 @@ struct Method5217TimerView: View {
                 .font(.system(size: 80))
                 .bold()
                 .fontDesign(.rounded)
+                .offset(x:0,y:-100)
 
             CircularProgressView(timerProgress: $timerProgress)
                 .padding()
+                .offset(x:0,y:-100)
 
             HStack {
                 withAnimation(.easeIn) {
@@ -31,6 +33,7 @@ struct Method5217TimerView: View {
                             .background(Color.green)
                             .cornerRadius(8)
                             .shadow(color: Color.green, radius: 20, y: 5)
+                            .offset(x:0,y:-100)
                     }
                     .disabled(isTimerRunning)
                 }
@@ -47,6 +50,7 @@ struct Method5217TimerView: View {
                             .background(Color.yellow)
                             .cornerRadius(8)
                             .shadow(color: Color.yellow, radius: 20, y: 5)
+                            .offset(x:0,y:-100)
                     }
                     .disabled(!isTimerRunning)
                 }
@@ -63,6 +67,7 @@ struct Method5217TimerView: View {
                             .background(Color.red)
                             .cornerRadius(8)
                             .shadow(color: Color.red, radius: 20, y: 5)
+                            .offset(x:0,y:-100)
                     }
                     .disabled(!isTimerRunning)
                 }
