@@ -96,6 +96,8 @@ struct PomodoroView: View {
             timer?.invalidate()
         }
     }
+    
+    // Functions
 
     func formatTime(_ seconds: Int) -> String {
         let minutes = seconds / 60

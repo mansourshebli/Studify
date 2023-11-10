@@ -100,6 +100,8 @@ struct Method4444TimerView: View {
         }
     }
 
+    // Functions
+
     func formatTime(_ seconds: Int) -> String {
         let minutes = seconds / 60
         let seconds = seconds % 60
@@ -120,6 +122,7 @@ struct Method4444TimerView: View {
             }
         }
     }
+
 
     func pauseTimer() {
         timer?.invalidate()

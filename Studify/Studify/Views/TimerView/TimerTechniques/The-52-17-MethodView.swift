@@ -96,6 +96,8 @@ struct Method5217TimerView: View {
             timer?.invalidate()
         }
     }
+    
+    // Functions
 
     func formatTime(_ seconds: Int) -> String {
         let minutes = seconds / 60
