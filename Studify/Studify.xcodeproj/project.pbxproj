@@ -115,6 +115,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6EB4D4392AFE1B0900F6C9E2 /* TimerTechniques */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2A2F42AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift */,
+				6EE2A2F52AFDBB0A005547F6 /* PomodoroView.swift */,
+				6EE2A2F82AFDBB0A005547F6 /* The-52-17-MethodView.swift */,
+				6EE2A2F12AFDBB0A005547F6 /* The50-10RuleView.swift */,
+			);
+			path = TimerTechniques;
+			sourceTree = "<group>";
+		};
 		6EE2A2E72AFDBB0A005547F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,12 +154,9 @@
 		6EE2A2F02AFDBB0A005547F6 /* TimerView */ = {
 			isa = PBXGroup;
 			children = (
-				6EE2A2F12AFDBB0A005547F6 /* The50-10RuleView.swift */,
 				6EE2A2F22AFDBB0A005547F6 /* CircularProgressView.swift */,
 				6EE2A2F32AFDBB0A005547F6 /* TimerView.swift */,
-				6EE2A2F42AFDBB0A005547F6 /* 4-4-4-4-MethodView.swift */,
-				6EE2A2F52AFDBB0A005547F6 /* PomodoroView.swift */,
-				6EE2A2F82AFDBB0A005547F6 /* The-52-17-MethodView.swift */,
+				6EB4D4392AFE1B0900F6C9E2 /* TimerTechniques */,
 			);
 			path = TimerView;
 			sourceTree = "<group>";
