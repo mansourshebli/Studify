@@ -8,6 +8,7 @@ struct ContentView: View {
 
 struct Home: View {
     @State var selectedTab = "Dashboard"
+
     
     init() {
         UITabBar.appearance().isHidden = true
