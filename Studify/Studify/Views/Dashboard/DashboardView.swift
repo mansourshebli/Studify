@@ -2,41 +2,69 @@ import SwiftUI
 
 struct DashboardView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
-
+    @ObservedObject var todoManager = TodoManager()
     var body: some View {
-        VStack{
+        VStack {
             Spacer().frame(height: 40)
-            ZStack {
-                
-                Image("menu")
-                    .frame(width: 20, height: 20)
-                    .position(x: 45, y: 50)
-                
-                Text("Hi, Mansour 👋 ")
-                    .font(
-                        Font.custom("Rubik-Regular", size: 26)
-                    )
+
+            HStack {
+                Image(systemName: "line.3.horizontal")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(isDarkMode ? .white : .black)
+
+                Spacer()
+
+                Text("Hi, Mansour 👋")
+                    .font(.custom("Rubik-Regular", size: 26))
                     .multilineTextAlignment(.center)
-                    .frame(width: 300, alignment: .top)
-                    .position(x: 200, y: 50)
-                
-                
-                
+
+                Spacer()
+
                 Button {
                     isDarkMode.toggle()
                 } label: {
                     Image(systemName: isDarkMode ? "moon" : "sun.max")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
+                        .frame(width: 32, height: 32)
                         .foregroundColor(isDarkMode ? .white : .black)
                 }
-                .position(x: 340, y: 50)
                 .preferredColorScheme(isDarkMode ? .dark : .light)
-                
+
             }
+            .padding()
+
+            VStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .stroke(lineWidth: 10.0)
+                        .opacity(0.3)
+                        .foregroundColor(Color.blue)
+                        .frame(width: 100, height: 100)
+
+                    Circle()
+                        .trim(from: 0.0, to: CGFloat(min(todoManager.completionPercentage, 1.0)))
+                        .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                        .foregroundColor(Color.blue)
+                        .rotationEffect(Angle(degrees: 270.0))
+                        .animation(.linear)
+                        .frame(width: 100, height: 100)
+
+                    Text("\(Int(todoManager.completionPercentage * 100))%")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                }
+            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 20).fill(Color.white).shadow(radius: 5))
+
+            Spacer()
         }
-        
+        .padding()
+        .background(isDarkMode ? Color.black : Color.white)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
