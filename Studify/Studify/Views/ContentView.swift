@@ -97,7 +97,7 @@ struct Home: View {
         case "Dashboard":
             return "house"
         case "Todo":
-            return "list.bullet.clipboard"
+            return "checkmark.circle"
         case "Timer":
             return "clock"
         case "Goals":

@@ -33,7 +33,6 @@ struct PomodoroView: View {
                             .background(Color.green)
                             .cornerRadius(8)
                             .shadow(color: Color.green, radius: 20, y: 5)
-                            .offset(x:0,y:-100)
                     }
                     .disabled(isTimerRunning)
                 }
@@ -50,7 +49,6 @@ struct PomodoroView: View {
                             .background(Color.yellow)
                             .cornerRadius(8)
                             .shadow(color: Color.yellow, radius: 20, y: 5)
-                            .offset(x:0,y:-100)
                     }
                     .disabled(!isTimerRunning)
                 }
@@ -67,12 +65,11 @@ struct PomodoroView: View {
                             .background(Color.red)
                             .cornerRadius(8)
                             .shadow(color: Color.red, radius: 20, y: 5)
-                            .offset(x:0,y:-100)
                     }
                     .disabled(!isTimerRunning)
                 }
             }
-            .offset(y: 250)
+            .offset(y: 150)
         }
         .padding()
         .alert(isPresented: $showAlert) {
