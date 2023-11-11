@@ -89,7 +89,7 @@ struct DashboardView: View {
                             .frame(width: 180, height: 250)
                             .background(Color(red: 0.33, green: 0.89, blue: 0.56))
                             .cornerRadius(15)
-                            .shadow(color: Color.green, radius: 4, y: 0)
+                            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
 
 
                         Image("list-icon")
@@ -134,7 +134,7 @@ struct DashboardView: View {
                     .frame(width: 180, height: 250)
                     .background(Color(red: 1, green: 0.47, blue: 0.49))
                     .cornerRadius(15)
-                    .shadow(color: Color.red, radius: 4, y: 0)
+                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                         
                         
                         Image("goal-icon")
