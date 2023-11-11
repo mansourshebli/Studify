@@ -18,10 +18,14 @@ struct DashboardView: View {
                     .foregroundColor(isDarkMode ? .white : .black)
 
                 Spacer()
-
-                Text("Hi, Mansour 👋")
-                    .font(.custom("Rubik-Regular", size: 26))
-                    .multilineTextAlignment(.center)
+                VStack{
+                    Text("Hey there 👋")
+                        .font(.custom("Rubik-Regular", size: 26))
+                        .multilineTextAlignment(.center)
+                    Text("Ready to be productive?")
+                        .font(.custom("Rubik-Regular", size: 16))
+                        .multilineTextAlignment(.center)
+                }
 
                 Spacer()
 
@@ -40,6 +44,8 @@ struct DashboardView: View {
             .padding()
             LazyVGrid(columns: adaptiveColumns){
                 VStack{
+                    Text("Todos Completion").font(.custom("Rubik-Regular", size: 16))
+                        .multilineTextAlignment(.center)
                     ZStack {
                         Circle()
                             .stroke(lineWidth: 10.0)
@@ -67,6 +73,8 @@ struct DashboardView: View {
                 
                 //This widget is for the long term goals."
                 VStack(spacing: 16) {
+                    Text("Goals Completion").font(.custom("Rubik-Regular", size: 16))
+                        .multilineTextAlignment(.center)
                     ZStack {
                         Circle()
                             .stroke(lineWidth: 10.0)
@@ -98,7 +106,7 @@ struct DashboardView: View {
         .padding()
         .background(isDarkMode ? Color.black : Color.white)
         .edgesIgnoringSafeArea(.all)
-        .position(x:200,y:180)
+        .position(x:200,y:210)
         
     }
 }
