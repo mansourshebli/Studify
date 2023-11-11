@@ -96,7 +96,7 @@ struct DashboardView: View {
         .padding()
         .background(isDarkMode ? Color.black : Color.white)
         .edgesIgnoringSafeArea(.all)
-        .position(x:200,y:220)
+        .position(x:200,y:180)
         
     }
 }
