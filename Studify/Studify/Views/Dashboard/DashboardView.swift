@@ -64,6 +64,8 @@ struct DashboardView: View {
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 20).fill(Color.white).shadow(radius: 5))
                 
+                
+                //This widget is for the long term goals."
                 VStack(spacing: 16) {
                     ZStack {
                         Circle()
