@@ -41,6 +41,7 @@
 		6E0749AB2AFDB7C000D159D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E0749AE2AFDB7C000D159D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E0749BF2AFDB89100D159D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6E65C05A2AFFA186004D7D9A /* MotivationalQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MotivationalQuotes.json; sourceTree = "<group>"; };
 		6EE2A2E92AFDBB0A005547F6 /* LongTermGoalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTermGoalDetailView.swift; sourceTree = "<group>"; };
 		6EE2A2EA2AFDBB0A005547F6 /* LongTermGoalsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTermGoalsView.swift; sourceTree = "<group>"; };
 		6EE2A2EB2AFDBB0A005547F6 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE2A2FA2AFDBB0A005547F6 /* DashboardView.swift */,
+				6E65C05A2AFFA186004D7D9A /* MotivationalQuotes.json */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
