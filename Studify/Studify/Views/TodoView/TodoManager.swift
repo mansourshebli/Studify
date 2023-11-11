@@ -7,7 +7,7 @@ class TodoManager: ObservableObject {
         }
     }
 
-    var completionPercentage: Double {
+    var completionPercentageTodo: Double {
         let completedCount = todos.filter { $0.isCompleted }.count
         let totalCount = todos.count
         return totalCount > 0 ? Double(completedCount) / Double(totalCount) : 0.0

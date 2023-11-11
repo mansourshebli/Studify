@@ -10,7 +10,7 @@ struct ToDoView: View {
         NavigationView {
             List {
                 Section(header: SearchBar(searchText: $searchText)) {
-                    ProgressView(value: todoManager.completionPercentage)
+                    ProgressView(value: todoManager.completionPercentageTodo)
                 }
 
                 ForEach($todoManager.todos) { $todo in

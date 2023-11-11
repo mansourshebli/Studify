@@ -11,6 +11,7 @@ struct LongTermGoal: Identifiable, Codable {
     var title: String
     var subtasks: [Subtask]
     
+    
     var progress: Double {
         let completedSubtasks = subtasks.filter { $0.isCompleted }
         return Double(completedSubtasks.count) / Double(subtasks.count)

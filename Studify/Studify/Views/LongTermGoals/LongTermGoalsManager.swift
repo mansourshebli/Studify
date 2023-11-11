@@ -7,7 +7,8 @@ class LongTermGoalsManager: ObservableObject {
             save()
         }
     }
-        
+
+
     init() {
         load()
     }
