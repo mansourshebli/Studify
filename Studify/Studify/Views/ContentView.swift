@@ -26,18 +26,21 @@ struct Home: View {
                 DashboardView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Dashboard")
+                
+                TimerView()
+                    .ignoresSafeArea(.all, edges: .all)
+                    .tag("Timer")
 
                 ToDoView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Todo")
 
-                TimerView()
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("Timer")
-
+                
                 LongTermGoalsView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Goals")
+                
+                
             }
 
             HStack(spacing: 0) {
@@ -112,7 +115,7 @@ struct Home: View {
     }
 }
 
-var tabs = ["Dashboard", "Todo", "Timer", "Goals"]
+var tabs = ["Dashboard", "Timer", "Todo", "Goals"]
 
 struct CustomShape: Shape {
 
