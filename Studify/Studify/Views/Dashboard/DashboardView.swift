@@ -1,10 +1,5 @@
 import SwiftUI
 
-struct Quote: Decodable {
-    let text: String
-}
-
-
 struct DashboardView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     @ObservedObject var todoManager = TodoManager()
@@ -12,14 +7,6 @@ struct DashboardView: View {
         GridItem(.adaptive(minimum: 120))
     ]
 
-    private var motivationalQuotes: [String] {
-        if let url = Bundle.main.url(forResource: "MotivationalQuotes", withExtension: "json"),
-           let data = try? Data(contentsOf: url),
-           let quotes = try? JSONDecoder().decode([Quote].self, from: data) {
-            return quotes.map { $0.text }
-        }
-        return []
-    }
 
     var body: some View {
         VStack {
