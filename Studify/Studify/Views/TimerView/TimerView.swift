@@ -20,7 +20,7 @@ struct TimerView: View {
                     ForEach(techniquesWithIcons, id: \.0) { (technique, iconName, description, color, destinationView) in
                         NavigationLink(destination: destinationView) {
                             ZStack {
-                                LinearGradient(gradient: Gradient(colors: [color, color.opacity(0.8)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                                LinearGradient(gradient: Gradient(colors: [color, color.opacity(0.5)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                     .frame(width: 170, height: 170)
                                     .cornerRadius(20)
                                     .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 2)
