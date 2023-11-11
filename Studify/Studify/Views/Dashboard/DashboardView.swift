@@ -3,6 +3,7 @@ import SwiftUI
 struct DashboardView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     @ObservedObject var todoManager = TodoManager()
+    @ObservedObject var longTermGoalsManager = LongTermGoalsManager()
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 120))
     ]
@@ -101,14 +102,14 @@ struct DashboardView: View {
                             .frame(width: 100, height: 100)
 
                         Circle()
-                            .trim(from: 0.0, to: CGFloat(min(todoManager.completionPercentageTodo, 1.0)))
+                            .trim(from: 0.0, to: CGFloat(min(longTermGoalsManager.completionPercentage, 1.0)))
                             .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.blue)
                             .rotationEffect(Angle(degrees: 270.0))
                             .animation(.linear)
                             .frame(width: 100, height: 100)
 
-                        Text("\(Int(todoManager.completionPercentageTodo * 100))%")
+                        Text("\(Int(longTermGoalsManager.completionPercentage * 100))%")
                             .font(.headline)
                             .foregroundColor(.blue)
                     }
