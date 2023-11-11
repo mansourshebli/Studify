@@ -79,7 +79,7 @@ struct DashboardView: View {
                         Rectangle()
                             .foregroundColor(.clear)
                             .frame(width: 180, height: 250)
-                            .background(Color(red: 0.33, green: 0.89, blue: 0.56))
+                            .background(Color(red: 26/255, green: 188/255, blue: 156/255))
                             .cornerRadius(15)
                             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
 
@@ -124,7 +124,7 @@ struct DashboardView: View {
                     Rectangle()
                     .foregroundColor(.clear)
                     .frame(width: 180, height: 250)
-                    .background(Color(red: 1, green: 0.47, blue: 0.49))
+                    .background(   Color(red: 255/255, green: 180/255, blue: 100/255))
                     .cornerRadius(15)
                     .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                         
