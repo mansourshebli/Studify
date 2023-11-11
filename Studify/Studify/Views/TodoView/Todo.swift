@@ -12,4 +12,3 @@ struct Todo: Identifiable, Codable {
     var todoDueDate = Date()
     var isCompleted = false
 }
-

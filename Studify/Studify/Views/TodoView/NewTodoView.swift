@@ -3,8 +3,9 @@ import SwiftUI
 struct NewTodoView: View {
     @State private var title = ""
     @State private var subtitle = ""
-    @Binding var sourceArray: [Todo]
+    @State private var dueDate = Date()
 
+    var onSave: (Todo) -> Void
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -12,15 +13,17 @@ struct NewTodoView: View {
             Section {
                 TextField("Title", text: $title)
                 TextField("Subtitle", text: $subtitle)
+                DatePicker("Due Date", selection: $dueDate)
             }
             Section {
                 Button("Save") {
-                    let todo = Todo(
+                    let newTodo = Todo(
                         title: title,
                         subtitle: subtitle,
+                        todoDueDate: dueDate,
                         isCompleted: false
                     )
-                    sourceArray.append(todo)
+                    onSave(newTodo)
                     dismiss()
                 }
                 Button("Cancel", role: .destructive) {
@@ -33,6 +36,10 @@ struct NewTodoView: View {
 
 struct NewTodoView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTodoView(sourceArray: .constant([]))
+        let onSave: (Todo) -> Void = { todo in
+            // Implement how to handle the new todo in your app
+            print("Saved todo: \(todo)")
+        }
+        return NewTodoView(onSave: onSave)
     }
 }

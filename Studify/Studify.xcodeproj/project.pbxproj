@@ -183,12 +183,12 @@
 		6EE2A2FB2AFDBB0A005547F6 /* TodoView */ = {
 			isa = PBXGroup;
 			children = (
-				6EE2A2FC2AFDBB0A005547F6 /* NewTodoView.swift */,
 				6EE2A2FD2AFDBB0A005547F6 /* ToDoView.swift */,
+				6EE2A2FC2AFDBB0A005547F6 /* NewTodoView.swift */,
 				6EE2A2FE2AFDBB0A005547F6 /* TodoDetailView.swift */,
-				6EE2A2FF2AFDBB0A005547F6 /* SearchBar.swift */,
-				6EE2A3002AFDBB0A005547F6 /* TodoManager.swift */,
 				6EE2A3012AFDBB0A005547F6 /* Todo.swift */,
+				6EE2A3002AFDBB0A005547F6 /* TodoManager.swift */,
+				6EE2A2FF2AFDBB0A005547F6 /* SearchBar.swift */,
 			);
 			path = TodoView;
 			sourceTree = "<group>";
