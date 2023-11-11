@@ -1,43 +1,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("onboardingCompleted") var onboardingCompleted = false
     var body: some View {
-        Home()
+        if onboardingCompleted {
+            Home()
+        } else {
+            OnboardingView(onboardingCompleted: $onboardingCompleted)
+        }
     }
 }
 
 struct Home: View {
-    @State var selectedTab = "Dashboard"
+    @State private var selectedTab = "Dashboard"
+    @State private var xAxis: CGFloat = 0
+    @Namespace private var animation
 
-    
     init() {
         UITabBar.appearance().isHidden = true
     }
-    
-    @State var xAxis: CGFloat = 0
-    
-    @Namespace var animation
-    
+
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedTab) {
                 DashboardView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Dashboard")
-                
+
                 ToDoView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Todo")
-                
+
                 TimerView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Timer")
-                
+
                 LongTermGoalsView()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("Goals")
             }
-            
+
             HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { image in
                     GeometryReader { reader in
@@ -66,7 +68,7 @@ struct Home: View {
                         }
                     }
                     .frame(width: 25, height: 30)
-                    
+
                     if image != tabs.last {
                         Spacer(minLength: 0)
                     }
@@ -76,8 +78,8 @@ struct Home: View {
             .padding(.vertical)
             .background(
                 Color.cyan
-                .clipShape(CustomShape(xAxis: xAxis))
-                .cornerRadius(12)
+                    .clipShape(CustomShape(xAxis: xAxis))
+                    .cornerRadius(12)
             )
             .padding(.horizontal)
             .padding(.bottom, UIApplication.shared.connectedScenes
@@ -86,12 +88,10 @@ struct Home: View {
                                         .windows
                                         .first?
                                         .safeAreaInsets.bottom ?? 0)
-
         }
         .ignoresSafeArea(.all, edges: .bottom)
     }
-    
-    // Getting System Symbol Name
+
     func getSystemSymbolName(image: String) -> String {
         switch image {
         case "Dashboard":
@@ -106,8 +106,7 @@ struct Home: View {
             return ""
         }
     }
-    
-    // Getting Image Color
+
     func getColor(image: String) -> Color {
         return selectedTab == image ? Color.white : Color.gray
     }
@@ -115,46 +114,44 @@ struct Home: View {
 
 var tabs = ["Dashboard", "Todo", "Timer", "Goals"]
 
-// Curve
 struct CustomShape: Shape {
-    
+
     var xAxis: CGFloat
-    
+
     var animatableData: CGFloat {
         get {
             return xAxis
         }
-        
+
         set {
             xAxis = newValue
         }
     }
-    
+
     func path(in rect: CGRect) -> Path {
         return Path { path in
             path.move(to: CGPoint(x: 0, y: 0))
             path.addLine(to: CGPoint(x: rect.width, y: 0))
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
-            
+
             let center = xAxis
-            
+
             path.move(to: CGPoint(x: center - 50, y: 0))
-            
+
             let to1 = CGPoint(x: center, y: 35)
             let control1 = CGPoint(x: center - 25, y: 0)
             let control2 = CGPoint(x: center - 25, y: 35)
-            
+
             let to2 = CGPoint(x: center + 50, y: 0)
             let control3 = CGPoint(x: center + 25, y: 35)
             let control4 = CGPoint(x: center + 25, y: 0)
-            
+
             path.addCurve(to: to1, control1: control1, control2: control2)
             path.addCurve(to: to2, control1: control3, control2: control4)
         }
     }
 }
-
 
 #Preview {
     ContentView()

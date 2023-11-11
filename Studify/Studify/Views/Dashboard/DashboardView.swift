@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @AppStorage("userName") var userName: String = ""
+    @AppStorage("selectedProfile") var selectedProfile: Int = 0
     @AppStorage("isDarkMode") private var isDarkMode = false
     @ObservedObject var todoManager = TodoManager()
     @ObservedObject var longTermGoalsManager = LongTermGoalsManager()
@@ -10,18 +12,20 @@ struct DashboardView: View {
 
 
     var body: some View {
+
         VStack {
             Spacer().frame(height: 40)
             HStack {
-                Image(systemName: "line.3.horizontal")
+                Image("\(selectedProfile)")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(isDarkMode ? .white : .black)
+                    .frame(width: 100, height: 90)
+                    .foregroundColor(.white)
+    
 
                 Spacer()
                 VStack {
-                    Text("Hey there 👋")
+                    Text("Hey \(userName) 👋")
                         .font(.custom("Rubik-Regular", size: 26))
                         .multilineTextAlignment(.center)
                     Text("Ready to be productive?")
