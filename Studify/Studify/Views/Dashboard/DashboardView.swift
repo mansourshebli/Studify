@@ -59,7 +59,7 @@ struct DashboardView: View {
             LazyVGrid(columns: adaptiveColumns) {
                 VStack {
                     Text("Todos Completion")
-                        .font(.custom("Rubik-Regular", size: 16))
+                        .font(.custom("Rubik-Regular", size: 18))
                         .multilineTextAlignment(.center)
                     ZStack {
                         Circle()
@@ -82,17 +82,29 @@ struct DashboardView: View {
                     }
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 20)
-                    .fill(LinearGradient(
-                        gradient: Gradient(colors: [Color.green.opacity(0.4), Color.green.opacity(1)]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ))
-                    .shadow(radius: 5))
+                .background(
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 180, height: 250)
+                            .background(Color(red: 0.33, green: 0.89, blue: 0.56))
+                            .cornerRadius(15)
+                            .shadow(color: Color.green, radius: 4, y: 0)
+
+
+                        Image("list-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                            .position(x:35, y: 30)
+                        
+                    }
+                )
+
 
                 VStack(spacing: 16) {
                     Text("Goals Completion")
-                        .font(.custom("Rubik-Regular", size: 16))
+                        .font(.custom("Rubik-Regular", size: 18))
                         .multilineTextAlignment(.center)
                     ZStack {
                         Circle()
@@ -115,39 +127,34 @@ struct DashboardView: View {
                     }
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 20)
-                    .fill(LinearGradient(
-                        gradient: Gradient(colors: [Color.orange.opacity(0.4), Color.orange.opacity(1.0)]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ))
-                    .shadow(radius: 5))
-
-                VStack {
-                    Text("Motivational Quotes")
-                        .font(.custom("Rubik-Regular", size: 16))
-                        .multilineTextAlignment(.center)
-
-                    Text(motivationalQuotes.randomElement() ?? "")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                }
+                .background(
+                    ZStack{
+                    Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(width: 180, height: 250)
+                    .background(Color(red: 1, green: 0.47, blue: 0.49))
+                    .cornerRadius(15)
+                    .shadow(color: Color.red, radius: 4, y: 0)
+                        
+                        
+                        Image("goal-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                            .position(x:35, y: 30)
+                      }
+                    )
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 20)
-                    .fill(LinearGradient(
-                        gradient: Gradient(colors: isDarkMode ? [Color.gray.opacity(0.2), Color.gray.opacity(0.6)] : [Color.gray.opacity(0.4), Color.gray.opacity(1.0)]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ))
-                    .shadow(radius: 5))
+                        
             }
         }
         .padding()
         .background(isDarkMode ? Color.black : Color.white)
         .edgesIgnoringSafeArea(.all)
         .position(x: 200, y: 210)
+        
+        
+        
     }
 }
 
