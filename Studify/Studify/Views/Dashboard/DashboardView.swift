@@ -68,7 +68,11 @@ struct DashboardView: View {
                     
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 20).fill(Color.white).shadow(radius: 5))
+                .background(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(
+                    gradient: Gradient(colors: [Color.green.opacity(0.4), Color.green.opacity(1)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )).shadow(radius: 5))
                 
                 
                 //This widget is for the long term goals."
@@ -97,7 +101,11 @@ struct DashboardView: View {
                     
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 20).fill(Color.white).shadow(radius: 5))
+                .background(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(
+                    gradient: Gradient(colors: [Color.orange.opacity(0.4), Color.orange.opacity(1.0)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )).shadow(radius: 5))
                 
                 
 
