@@ -7,7 +7,7 @@ struct DashboardView: View {
     @ObservedObject var todoManager = TodoManager()
     @ObservedObject var longTermGoalsManager = LongTermGoalsManager()
     private let adaptiveColumns = [
-        GridItem(.adaptive(minimum: 120))
+        GridItem(.adaptive(minimum: 175))
     ]
 
 
@@ -48,7 +48,7 @@ struct DashboardView: View {
             }
             .padding()
 
-            LazyVGrid(columns: adaptiveColumns) {
+            LazyVGrid(columns: adaptiveColumns, spacing: 50) {
                 VStack {
                     Text("Todos Completion")
                         .font(.custom("Rubik-Regular", size: 18))
@@ -137,13 +137,43 @@ struct DashboardView: View {
                       }
                     )
                 .padding()
+                
+                
+                VStack(spacing: 16) {
+                    
+                    
+                    Text("Motivation Snaps🫰")
+                        .font(.custom("Rubik-Regular", size: 20)).lineLimit(1).frame(width: 200).position(x:123,y:-15)
+                    Text("Click! Click! Click!")
+                        .font(.custom("Rubik-Regular", size: 12)).lineLimit(1).frame(width: 200).position(x:81,y:-30)
+                    
+                    
+                }
+                .padding()
+                .background(
+                    ZStack{
+                    Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(width: 360, height: 250)
+                    .background( Color(red:100/255, green: 200/255, blue: 220/255))
+                    .cornerRadius(15)
+                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4).position(x:165,y:100)
+                        
+                        //This icon is copyright free
+                        Image("trophy-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45).position(x:18, y:8)
+                      }
+                    )
+                .padding()
                         
             }
         }
         .padding()
         .background(isDarkMode ? Color.black : Color.white)
         .edgesIgnoringSafeArea(.all)
-        .position(x: 200, y: 210)
+        .position(x: 200, y: 270)
         
         
         

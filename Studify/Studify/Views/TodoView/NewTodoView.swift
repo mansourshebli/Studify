@@ -37,7 +37,6 @@ struct NewTodoView: View {
 struct NewTodoView_Previews: PreviewProvider {
     static var previews: some View {
         let onSave: (Todo) -> Void = { todo in
-            // Implement how to handle the new todo in your app
             print("Saved todo: \(todo)")
         }
         return NewTodoView(onSave: onSave)
