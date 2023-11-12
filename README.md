@@ -3,5 +3,5 @@
 </div>
 
 <p align="center">
-  <img src="ReadmeAssets/Studify_icon.png" alt="Studify Image">
+  <img src="ReadmeAssets/Studify_icon.jpeg" alt="Studify Image">
 </p>
