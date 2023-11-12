@@ -5,11 +5,10 @@
 <p align="center">
   <img src="ReadmeAssets/Studify_banner.png" alt="Studify Banner">
 </p>
-
 <div align="left">
   <h1>🚀 What does Studify offer to students?</h1>
   <p align="left">
-    Studify is an all-encompassing application designed to significantly enhance students' productivity and academic success. It combines timers, featuring popular study techniques, with an easy-to-use interface that includes robust task management and goal-setting capabilities. Essentially, Studify is a versatile tool that addresses various challenges students encounter in their academic journey, providing a single platform for organization, focus, and motivation.
+    Studify is an all-encompassing application designed to significantly enhance students' productivity and academic success. It combines ⏲️ timers, featuring popular study techniques, with an easy-to-use interface that includes robust task management and goal-setting capabilities. Essentially, Studify is a versatile tool that addresses various challenges students encounter in their academic journey, providing a single platform for organization, focus, and motivation.
   </p>
 </div>
 
@@ -23,7 +22,7 @@
 <div align="left">
   <h1>⏰ How does Studify revolutionize time management?</h1>
   <p align="left">
-    Studify revolutionizes time management by introducing an innovative timer feature. Through the incorporation of popular study techniques, Studify ensures that study sessions are both productive and sustainable. The adaptable timers prevent burnout and promote a balanced study routine, offering students the flexibility to optimize their study sessions based on their unique learning styles and preferences. Studify's commitment to redefining time management lies in providing students with a flexible tool to enhance their study sessions effectively.
+    Studify revolutionizes time management by introducing an innovative ⏲️ timer feature. Through the incorporation of popular study techniques, Studify ensures that study sessions are both productive and sustainable. The adaptable timers prevent burnout and promote a balanced study routine, offering students the flexibility to optimize their study sessions based on their unique learning styles and preferences. Studify's commitment to redefining time management lies in providing students with a flexible tool to enhance their study sessions effectively.
   </p>
 </div>
 
@@ -40,3 +39,4 @@
     Studify becomes an indispensable tool for lasting academic success by fostering a proactive and goal-oriented mindset. The long-term goals feature, complemented by detailed subtasks, empowers students to envision and work towards achieving their overarching objectives. By breaking down larger aspirations into manageable steps, Studify ensures that students have a clear roadmap for success throughout their educational journey. This strategic approach significantly contributes to long-term academic accomplishments by helping students stay focused and motivated in their pursuit of academic excellence.
   </p>
 </div>
+
