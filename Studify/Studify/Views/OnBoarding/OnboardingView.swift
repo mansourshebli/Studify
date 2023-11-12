@@ -103,7 +103,7 @@ struct OnboardingView: View {
                 .alert(isPresented: $showError) {
                     Alert(
                         title: Text("Error"),
-                        message: Text("Please fill in all fields."),
+                        message: Text("Please fill all fields."),
                         dismissButton: .default(Text("OK"))
                     )
                 }
