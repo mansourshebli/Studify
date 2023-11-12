@@ -9,9 +9,18 @@ struct DashboardView: View {
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 175))
     ]
+    
+    let motivationalSnaps = [
+        "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+        "The only way to achieve the impossible is to believe it is possible.",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "Your attitude, not your aptitude, will determine your altitude.",
+        "Don’t watch the clock; do what it does. Keep going.",
+    ]
 
 
     var body: some View {
+        
 
         VStack {
             Spacer().frame(height: 40)
@@ -178,6 +187,7 @@ struct DashboardView: View {
         
         
     }
+    
 }
 
 
