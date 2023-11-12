@@ -162,4 +162,5 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView(onboardingCompleted: .constant(false))
+        .preferredColorScheme(.light)
 }

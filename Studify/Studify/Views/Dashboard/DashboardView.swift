@@ -17,6 +17,10 @@ struct DashboardView: View {
         "Your attitude, not your aptitude, will determine your altitude.",
         "Don’t watch the clock; do what it does. Keep going.",
     ]
+    
+    var profilePicture: String {
+        return selectedProfile == 1 ? "user-boy" : "user-girl"
+    }
 
     @State private var currentMotivationalSnap = ""
 
@@ -24,7 +28,7 @@ struct DashboardView: View {
         VStack {
             Spacer().frame(height: 280)
             HStack {
-                Image("\(selectedProfile)")
+                Image("\(profilePicture)")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 45, height: 45)
