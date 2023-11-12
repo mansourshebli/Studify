@@ -9,7 +9,7 @@ struct DashboardView: View {
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 175))
     ]
-    
+
     let motivationalSnaps = [
         "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
         "The only way to achieve the impossible is to believe it is possible.",
@@ -18,19 +18,17 @@ struct DashboardView: View {
         "Don’t watch the clock; do what it does. Keep going.",
     ]
 
+    @State private var currentMotivationalSnap = ""
 
     var body: some View {
-        
-
         VStack {
-            Spacer().frame(height: 40)
+            Spacer().frame(height: 280)
             HStack {
                 Image("\(selectedProfile)")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 90)
+                    .frame(width: 45, height: 45)
                     .foregroundColor(.white)
-    
 
                 Spacer()
                 VStack {
@@ -92,16 +90,13 @@ struct DashboardView: View {
                             .cornerRadius(15)
                             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
 
-
                         Image("list-icon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
-                            .position(x:35, y: 30)
-                        
+                            .position(x: 35, y: 30)
                     }
                 )
-
 
                 VStack(spacing: 16) {
                     Text("Goals Completion")
@@ -129,67 +124,83 @@ struct DashboardView: View {
                 }
                 .padding()
                 .background(
-                    ZStack{
-                    Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 180, height: 250)
-                    .background(   Color(red: 255/255, green: 180/255, blue: 100/255))
-                    .cornerRadius(15)
-                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                        
-                        
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 180, height: 250)
+                            .background(Color(red: 255/255, green: 180/255, blue: 100/255))
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                         Image("goal-icon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
-                            .position(x:35, y: 30)
-                      }
-                    )
+                            .position(x: 35, y: 30)
+                    }
+                )
                 .padding()
-                
-                
+
                 VStack(spacing: 16) {
-                    
-                    
                     Text("Motivation Snaps🫰")
-                        .font(.custom("Rubik-Regular", size: 20)).lineLimit(1).frame(width: 200).position(x:123,y:-15)
-                    Text("Click! Click! Click!")
-                        .font(.custom("Rubik-Regular", size: 12)).lineLimit(1).frame(width: 200).position(x:81,y:-30)
+                        .font(.custom("Rubik-Regular", size: 20))
+                        .lineLimit(1)
+                        .frame(width: 200)
+                        .position(x:123,y:-15)
                     
-                    
+                    Button {
+                        updateMotivationalSnap()
+                    } label: {
+                        Text("Click! Click! Click!")
+                            .font(.custom("Rubik-Regular", size: 13))
+                            .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.brown, Color.gray, Color.black]), startPoint: .leading, endPoint: .trailing))
+                            .padding(2)
+
+                    }.position(x: 81, y: -80)
+
+
+
+                    Text(currentMotivationalSnap)
+                        .font(.custom("Rubik-Italic", size: 20))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .frame(width: 320, height: 150)
+                        .position(x:143,y:-80)
+                        .onAppear(perform: {
+                            updateMotivationalSnap()
+                        })
+
                 }
                 .padding()
                 .background(
-                    ZStack{
-                    Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 360, height: 250)
-                    .background( Color(red:100/255, green: 200/255, blue: 220/255))
-                    .cornerRadius(15)
-                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4).position(x:165,y:100)
-                        
-                        //This icon is copyright free
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 360, height: 250)
+                            .background(Color(red: 100/255, green: 200/255, blue: 220/255))
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                            .position(x: 165, y: 100)
+
                         Image("trophy-icon")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 45, height: 45).position(x:18, y:8)
-                      }
-                    )
+                            .frame(width: 45, height: 45)
+                            .position(x: 18, y: 8)
+                    }
+                )
                 .padding()
-                        
             }
         }
         .padding()
         .background(isDarkMode ? Color.black : Color.white)
         .edgesIgnoringSafeArea(.all)
         .position(x: 200, y: 270)
-        
-        
-        
     }
-    
-}
 
+    private func updateMotivationalSnap() {
+        currentMotivationalSnap = motivationalSnaps.randomElement() ?? ""
+    }
+}
 
 #Preview {
     DashboardView()
