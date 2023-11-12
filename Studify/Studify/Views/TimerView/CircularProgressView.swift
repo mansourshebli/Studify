@@ -1,3 +1,10 @@
+//
+//  CircularProgressView.swift
+//  Studify
+//
+//  Created by Mansour Mohammed Alshebli on 02/10/2023.
+//
+
 import SwiftUI
 
 // Struct to display a circular progress view for a timer

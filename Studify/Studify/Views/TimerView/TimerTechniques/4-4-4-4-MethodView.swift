@@ -1,3 +1,10 @@
+//
+//  4-4-4-4-MethodView.swift
+//  Studify
+//
+//  Created by Mansour Mohammed Alshebli on 23/09/2023.
+//
+
 import SwiftUI
 
 struct Method4444TimerView: View {

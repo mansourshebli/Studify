@@ -1,3 +1,10 @@
+//
+//  PomodoraView.swift
+//  Studify
+//
+//  Created by Mansour Mohammed Alshebli on 23/09/2023.
+//
+
 import SwiftUI
 
 struct PomodoroView: View {
