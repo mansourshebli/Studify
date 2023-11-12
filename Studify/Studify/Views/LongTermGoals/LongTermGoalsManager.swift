@@ -1,3 +1,10 @@
+//
+//  LongTermGoalsManager.swift
+//  Studify
+//
+//  Created by Mansour Mohammed Alshebli on 05/11/2023.
+//
+
 import Foundation
 import SwiftUI
 
