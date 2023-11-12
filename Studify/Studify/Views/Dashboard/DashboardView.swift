@@ -152,15 +152,11 @@ struct DashboardView: View {
                         .frame(width: 200)
                         .position(x:123,y:-15)
                     
-                    Button {
-                        updateMotivationalSnap()
-                    } label: {
+                   
                         Text("Click! Click! Click!")
                             .font(.custom("Rubik-Regular", size: 13))
                             .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.brown, Color.gray, Color.black]), startPoint: .leading, endPoint: .trailing))
-                            .padding(2)
-
-                    }.position(x: 81, y: -80)
+                            .padding(2).position(x: 84, y: -78)
 
 
 
@@ -184,7 +180,9 @@ struct DashboardView: View {
                             .background(Color(red: 100/255, green: 200/255, blue: 220/255))
                             .cornerRadius(15)
                             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                            .position(x: 165, y: 100)
+                            .position(x: 165, y: 100).onTapGesture {
+                                updateMotivationalSnap()
+                            }
 
                         Image("trophy-icon")
                             .resizable()
