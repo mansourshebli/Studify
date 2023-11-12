@@ -1,8 +1,8 @@
 //
-//  Studify_AppApp.swift
-//  Studify-App
+//  StudifyApp.swift
+//  Studify
 //
-//  Created by Mansour Mohammed Alshebli on 10/11/2023.
+//  Created by Mansour Mohammed Alshebli on 31/08/2023.
 //
 
 import SwiftUI
