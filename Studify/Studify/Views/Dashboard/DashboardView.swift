@@ -150,7 +150,6 @@ struct DashboardView: View {
                    
                         Text("Click! Click! Click!")
                             .font(.custom("Rubik-Regular", size: 13))
-                            .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.brown, Color.gray, Color.black]), startPoint: .leading, endPoint: .trailing))
                             .padding(2).position(x: 84, y: -78)
 
 
