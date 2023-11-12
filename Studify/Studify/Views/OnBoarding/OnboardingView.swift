@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct OvalTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
@@ -16,6 +17,7 @@ struct OvalTextFieldStyle: TextFieldStyle {
             .shadow(color: .gray, radius: 10)
     }
 }
+
 
 struct CircleOption: View {
     var imageName: String
@@ -102,7 +104,7 @@ struct OnboardingView: View {
                 .padding()
                 .alert(isPresented: $showError) {
                     Alert(
-                        title: Text("Error"),
+                        title: Text("Error❗️"),
                         message: Text("Please fill all fields."),
                         dismissButton: .default(Text("OK"))
                     )
