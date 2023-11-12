@@ -1,3 +1,49 @@
+/**
+ # Studify Documentation
+
+ ## Overview
+ Studify is a robust iOS application tailored for academic enhancement. This documentation outlines key features and functionalities.
+
+ ## Installation
+ 1. **iOS:** Download from the App Store.
+    - Search for "Studify" and install.
+
+ ## Features
+
+ ### 1. Comprehensive Toolset
+   - Integration of timers and study techniques.
+   - User-friendly interface for task management and goal-setting.
+
+ ### 2. Essential for Academic Success
+   - Holistic companion offering effective study techniques.
+   - Seamlessly integrates user-friendly interfaces and goal-setting functionalities.
+
+ ### 3. Innovative Time Management
+   - Introduction of an adaptable timer feature.
+   - Ensures productive and sustainable study sessions.
+
+ ### 4. Task Management Excellence
+   - Intuitive interface combining to-do lists and long-term goals.
+   - Strategic roadmap for efficient organization of tasks.
+
+ ### 5. Strategic Academic Success
+   - Fosters a proactive and goal-oriented mindset.
+   - Long-term goals feature with detailed subtasks for achieving objectives.
+
+ ## Usage
+ - Explore app features through the interface.
+ - Refer to documentation headings for detailed feature insights.
+
+ ## Version History
+ - Current Version: 1.0.0 (Check the App Store for updates).
+
+ ---
+ © 2023
+*/
+
+
+
+
 import SwiftUI
 
 struct ContentView: View {
