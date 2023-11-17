@@ -32,7 +32,7 @@
 
  ## Usage
  - Explore app features through the interface.
- - Refer to documentation headings for detailed feature insights.
+ - Refer to the GitHub repo  for detailed feature insights.
 
  ## Version History
  - Current Version: 1.0.0 (Check the App Store for updates).
